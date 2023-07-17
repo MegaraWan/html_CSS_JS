@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <style>
+        p {
+        height:90vh;
+        font-size:200px;
+        border:10px solid red;
+    }
+    </style>
+</head>
+<body>
+
+    <!--
+        target屬性 用來指定超連結打開的位置
+        可選擇
+        _self 默認值 在當前頁面中打開超連結
+        _blank 在一個新的頁面中打開超連結
+
+    -->
+    <a href="07.列表.html#10.範例連結用"traget="_blank">連結到07章節的class10.範例連結</a>
+    <!-- blank開新視窗 -->
+
+    <br>
+    <a href="#bottom">去底部</a>
+    <br>
+    <a href="#p3">去第三個自然段</a> <!--錨點連結-->
+    <br>
+
+    <!--在開發中可以將#作為超連結的路徑展位符使用，但#也有回到頂部的意思-->
+    <a href="#">這是一個還沒定案的超連結</a>
+    <br>
+    <!--可以使用 javasscript:; 來作為href的屬性 此時點擊這個超連結什麼事都不會發生-->
+    <a href="javasscript:;">這是一個還沒定案的超連結</a>
+    <br>---
+
+    <p>第一段</p>
+    <p>第二段</p>
+    <p id="p3">第三段</p>
+    <p>第四段</p>
+    <p>第五段</p>
+    <!--
+        可以直接將超連結href屬性設置為#，這樣點擊超連結以後
+        頁面不會發生跳轉，而是轉到網頁的頂部位置
+
+        可以跳轉到頁面的指定位置 只需將herf屬性設置 #目標元素的id屬性
+
+        id屬性（唯一不重複的）
+            - 每一個標籤都可以添加一個id屬性
+            - id屬性是元素的唯一標示 同一個頁面不能出現重複瘩id屬性
+            - 正常都是字母開頭 不會數字開頭
+    -->
+
+    <a id="bottom" href="#">回到頂部</a>
+</body>
+</html>

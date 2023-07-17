@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: #aaa;
+            padding: 10px;
+            
+            text-align: center;
+            /* 對"字"&行元素才有效 
+            這個是對span1這個詞置中
+            紅色框框已經設成了塊元素
+            所以要置中要再設定margin:auto*/
+
+        }
+        .box span{
+            background-color: #f00;
+            font-size:32px;
+
+            width:100px;
+            display: block;
+            /* 把行元素改成塊元素才能設定寬 */
+
+            margin:auto;
+            /* 對紅色這個區塊置中,
+            裡面"字"還是
+            要用text-align*/
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>span1</span>
+    </div>
+</body>
+</html>

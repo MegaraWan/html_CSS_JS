@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background-image: linear-gradient(90deg, transparent 99px, #ccc 99px);
+            background-size: 100px 100px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #666;
+            margin-top: 100px;
+            position: relative;
+            animation: go 5s -1s linear ;
+        }
+
+        @keyframes go {
+            0%{ left: 0;}
+            100%{ left: 500px;}
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="box"></div>
+
+
+
+
+    
+</body>
+</html>

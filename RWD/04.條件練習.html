@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap{
+            /* max-width: 1200px; */
+            /* 這樣設定表示桌機上旁邊有留白，
+            換到其他小於1200的尺寸的時候會是滿版
+            也可以每個都設定留白
+            那就是底下一個一個設定width */
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            width: calc((100% / 2) - (10px * 2));
+            height: 200px;
+            background-color: #aaa;
+            margin: 10px;
+        }
+        @media screen and (min-width: 768px) {
+           .wrap{
+                width: 720px;
+                /* 設定width讓邊邊留白 */
+            }
+           .item{
+            width: calc((100% / 3) - (10px * 2));
+           } 
+        }
+        @media screen and (min-width: 1024px) {
+            .wrap{
+                width: 960px;
+            }
+           .item{
+            width: calc((100% / 4) - (10px * 2));
+           } 
+        }
+        @media screen and (min-width: 1200px) {
+            .wrap{
+                width: 1120px;
+            }
+           .item{
+            width: calc((100% / 6) - (10px * 2));
+           } 
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+
+
+
+</body>
+</html>

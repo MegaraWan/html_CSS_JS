@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"l" >
+<!-- dir="rtl" 書寫右至左 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            line-height: 1;
+            margin: 0;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            font-size: 32px;
+            color: #fff;
+            position: fixed;
+            /* 會把元素重原本的資料中抽掉，自己獨立一層
+            然後會停留在原地(參考空間是視窗的空間)
+            ，用於蓋板廣告等 */
+            left: 0;
+            /* 如果left跟right都設定為0
+            看書寫位子 如果設定rtl右至左 
+            東西變成靠右 不是看先後順序來決定*/
+            right: 50%;
+            /* 距離右邊視窗固定50%的空間 */
+            margin-left: auto;
+            /*auto 剩下可用空間 全部給左邊*/
+            margin-right: auto;
+            /* 剩下空間在平均分配給左跟右，
+            東西就會在左側50%的正中間 */
+
+            /*left:0;
+            right:0; 
+            top: 0;
+            bottom: 0; 
+            margin:auto; 這樣東西就會至中
+            */
+            z-index: 1;
+            /* 設定了z-index不然底下的.item會蓋住他
+            因為兩個都有定位(position:fixed) 後面蓋掉前面*/
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            background-color: #0f0;
+            position: fixed;
+            top: 100px;
+        }
+        .box + p {
+            color: #00f;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Lorem <span>span 1</span><span>span 2</span><span>span 3</span> ipsum dolor sit, amet consectetur adipisicing elit. Cumque quia voluptates perferendis consequatur enim laboriosam libero tenetur maxime eaque! Illum assumenda porro ex odio repellat consequuntur recusandae optio perferendis saepe.</p>
+    <div class="box">box</div>
+    <p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p>
+    
+    <div class="item">item</div>
+    
+    <p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p><p>Aut, quidem neque fugiat quas ipsum vitae impedit ab quaerat perspiciatis omnis corporis similique asperiores, id ut dolores a repellendus dolorem nesciunt? Id molestiae odio quisquam delectus numquam, quaerat voluptatibus?</p>
+    <p>Commodi quod nesciunt tempore vel alias. Natus repudiandae sint in laboriosam mollitia labore, quod, quae porro quo debitis assumenda dolor vel. Ratione quod inventore neque officiis. Minus similique fugiat laborum.</p>
+    <p>Cupiditate, amet voluptate. Eius vero nihil totam aliquid saepe commodi, sit magni nesciunt quidem repudiandae cupiditate architecto, molestiae aperiam possimus culpa sed excepturi alias rerum aliquam nostrum suscipit quasi ea?</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+    <p>Veniam molestias fugiat deleniti nemo nam. Necessitatibus nesciunt beatae amet quos ad cum est aspernatur totam repudiandae at aliquid aut explicabo nostrum obcaecati praesentium distinctio error rem, harum vitae. Perspiciatis!</p>
+
+
+
+    
+</body>
+</html>

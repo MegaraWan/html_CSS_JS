@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: #fa0;
+            font-size: 42px;
+        }
+        .item18{
+            background-color: #f00;
+            margin-right: -50px;
+            /*預設的情況下，兩個元素的重疊是看先後順序
+            所以19壓在18上*/
+            position: relative;
+            /* 但如果設定定位(position)之後
+            會比沒有設定的還要高，所以18又壓回19 */
+            top:50px;
+            z-index: 3;
+        /* 都有定位:原始碼順序/z-index大的在上
+            都一樣:HTML原始碼順序/(或z-index一樣)
+            不一樣:
+            1.有定位高於無定位
+            2.z-index大的在上 */
+        }
+        .item19{
+            height: 80px;
+            background-color: #00f;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="list">
+        <!-- .item.item${$}*40 -->
+        <!-- $會帶數字 -->
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+        <div class="item item11">11</div>
+        <div class="item item12">12</div>
+        <div class="item item13">13</div>
+        <div class="item item14">14</div>
+        <div class="item item15">15</div>
+        <div class="item item16">16</div>
+        <div class="item item17">17</div>
+        <div class="item item18">18</div>
+        <div class="item item19">19</div>
+        <div class="item item20">20</div>
+        <div class="item item21">21</div>
+        <div class="item item22">22</div>
+        <div class="item item23">23</div>
+        <div class="item item24">24</div>
+        <div class="item item25">25</div>
+        <div class="item item26">26</div>
+        <div class="item item27">27</div>
+        <div class="item item28">28</div>
+        <div class="item item29">29</div>
+        <div class="item item30">30</div>
+        <div class="item item31">31</div>
+        <div class="item item32">32</div>
+        <div class="item item33">33</div>
+        <div class="item item34">34</div>
+        <div class="item item35">35</div>
+        <div class="item item36">36</div>
+        <div class="item item37">37</div>
+        <div class="item item38">38</div>
+        <div class="item item39">39</div>
+        <div class="item item40">40</div>
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    01temperature.html (變數與運算式) 
+    設定變數存放今天的攝氏温度(30)
+    請寫程式將其轉換成華氏温度
+    請將轉換的結果顯示在頁面上。
+    註：華氏= (攝氏)(9/5) + 32-->
+    <script>
+        var C = 30;
+        var F;
+        F = C*(9/5)+32;
+        document.write(`華氏${F}度<br>`);
+    </script>    
+    <!-- 
+    02expressint.html (變數與運算式) 
+    設定變數存放現在的時間,
+    時(16), 分(54), 秒(20), 
+    請顯示自今天0點0分0秒到目前為止經過多少秒。 -->
+    <script>
+        var hr = 16;
+        var m = 54;
+        var s = 20;
+        s = hr*60*60+54*60+20;
+        document.write(`目前為止經過了${s}秒<br>`);
+    </script>
+    <!-- 
+    03expressint.html (變數與運算式)  
+    設定變數存放今天到目前為止所經過的秒數(比如8000秒)，
+    請將其轉換成時分秒後顯示在頁面上。-->
+    <script>
+        var s03= 8000;
+        var hr03;
+        var m03;
+        hr03 = parseInt(8000/60/60);
+        m03 = parseInt((s03%(60*60))/60);
+        s03 = 8000-hr03*60*60-m03*60;
+        document.write(`${hr03}時${m03}分${s03}秒`);
+    </script>
+
+</body>
+</html>

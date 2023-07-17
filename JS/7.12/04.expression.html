@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	h2{
+		color:deeppink;
+	}
+</style>
+</head>
+
+<body>
+<h2>算術</h2>
+<script>
+	document.write( "10*4 : ", 10 * 4, "<br>"); //40
+	document.write( "10/4 : ", 10/4, "<br>"); //2.5
+	document.write( "10%4 : ", 10%4, "<br>"); //2
+</script>
+
+
+
+<h2>字串</h2>
+<script>
+	var zone = "中壢區";
+ 	var road = "復興路46號";
+ 	var address;
+ 	address = zone + road;
+ 	document.write(  "address : ", address, "<br>");
+</script>
+
+<h2>比較</h2>
+<script>
+	document.write( "10>4 : ", 10>4, "<br>"); //true
+	document.write( "10<=4 : ", 10<=4, "<br>");  //false
+
+	document.write( "0===false : ", 0===false, "<br>"); //false
+	document.write( "0==false : ", 0==false, "<br>"); //true
+</script>
+
+
+<h2>邏輯</h2>
+<script>
+	document.write( "10>4 && 10<6 : ", 10>4 && 10<6 , "<br>"); //false
+	document.write( "10>4 || 10<6 : ", 10>4 || 10<6, "<br>"); //true
+	document.write( "! 10>4  : ", ! 10 > 4, "<br>"); // false > 4  --> false
+	document.write( "! 4>10  : ", ! 4 > 10, "<br>"); // false > 10 -->false
+	document.write( "! (4>10)  : ", ! (4 > 10), "<br>"); // ! false -->true
+</script>
+
+
+<h2>位元</h2>
+<script>
+	document.write( "10 & 6 : ", 10 & 6, "<br>"); //1010&0110=0010=2
+	document.write( "10 | 6 : ", 10 | 6, "<br>"); //1010|0110=1110=14
+</script>
+
+
+<h2>指定</h2> 
+<!-- 指定運算右邊算到左邊，其他運算左到右 -->
+<script>
+	var mm ,nn ,kk ;
+	// mm = 0;
+	// nn = 0;
+	// kk = 0;
+	// 簡寫成:
+	mm = nn = kk = 0 
+	//右到左，0=kk kk(0)=nn nn(0)=mm 
+
+	document.write( "mm : ", mm, "<br>");
+	document.write( "nn : ", nn, "<br>");
+	document.write( "kk : ", kk, "<br>");
+
+	var x = 10;
+	x = x + 2; //12
+	document.write( "x : ", x, "<br>");
+
+	var y = 100;
+	y = y * 2; //200
+	document.write( "y : ", y, "<br>");
+</script>
+
+
+<h2>typeof</h2>
+<!-- 顯示資料的類型 -->
+<script>
+	var price = "100";
+	document.write( "typeof price : ", typeof price, "<br>");
+</script>
+
+
+<h2>++在前-----1</h2>
+<!-- 遞增之後馬上取值做運算 -->
+<script>
+	 var x = 10;
+	 var y = ++x + 5;
+	 document.write( "x : ", x, "<br>"); //10+1=11
+	 document.write( "y : ", y, "<br>"); //11+5=16
+</script>
+
+
+<h2>++在後-----1</h2>
+<!-- 先取值做運算 再做遞增的動作 -->
+<script>
+	 var x = 10;
+	 var y = x++ + 5;
+	 document.write( "x : ", x, "<br>"); //10+1=11
+	 document.write( "y : ", y, "<br>"); //10(先取值做運算)+5=15
+</script>
+
+
+<h2>++在前-----2</h2>
+<script>
+	 a = 10;
+	 b = ++a + ++a;  
+	 document.write( "a : ", a, "<br>"); //12
+	 document.write( "b : ", b, "<br>"); //11+12=23
+</script>
+
+<h2>++在後-----2</h2>
+<script>
+	 a = 10;
+	 b = a++ + a++;  
+	 document.write( "a : ", a, "<br>"); //12
+	 document.write( "b : ", b, "<br>"); //10+11=21
+</script>
+ 
+</body>
+</html>

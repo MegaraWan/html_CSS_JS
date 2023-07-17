@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            min-height: 50px;
+            background-color: #F00;
+            background-image: url("https://picsum.photos/300/200/?random=10");
+            margin: auto;
+
+            /* transition: width  1s 0s cubic-bezier(0, 0.76, 0.34, 0.96); */
+            transition: 1s;
+
+        }
+        .box:hover{
+            
+            background-image: url("https://picsum.photos/300/200/?random=20");
+            height: 400px;
+            /* width: 600px; */
+            background-color: #00F; */
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+    <img src="https://picsum.photos/300/200/?random=10">
+    <img src="https://picsum.photos/300/200/?random=20">
+
+
+</body>
+</html>

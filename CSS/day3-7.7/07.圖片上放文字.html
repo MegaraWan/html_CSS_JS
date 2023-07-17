@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 300px;
+            border: 10px solid #f00;
+            position: relative;
+        }
+        .card .pic img{
+            width: 100%;
+            vertical-align: top;
+            /* 圖片是行內元素，垂直對齊 對齊基線
+            導致block下緣多一小段空間
+            用vertical-align清除 */
+            /* 或者把它設定成display:block
+            塊元素就沒有這個問題 */
+        }
+        .card .txt{
+            background-color: #0008;
+            position: absolute;
+            /* insent:0 */
+            /* 滿版蓋住 */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="card">
+        <div class="pic">
+            <img src="https://picsum.photos/300/200/?random=10">
+        </div>
+        <div class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus beatae incidunt voluptates
+        </div>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap{
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid red;
+            margin-left: auto;
+            margin-right: auto;
+            /* 寬度1200
+            剩下的空間左右auto=水平居中 */
+        }
+        .card{
+            width: 280px;
+            margin: 10px;
+            /* wrap 1200/4個卡片=300=280+10*2 */
+            box-shadow: 0px 0px 10px #666;
+            position: relative;
+        }
+        .card img{
+            width: 100%;
+        }
+        .card .txt{
+            padding: 20px;
+        }
+        .card .tag{
+            background-color: #fa0;
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            /* 直角三角形扁一點點所以凸出一點10 */
+            padding: 6px 10px;
+        }
+        .card .tag::after{
+            content: '';
+            position: absolute;
+
+            left: 0;
+            top: 100%;
+            /* 父層高度的100%
+            所以就會在底下 */
+
+            width: 0;
+            height: 0;
+            border-left: 10px solid #0000;
+            /* 讓他扁一點點設定10 */
+            border-top: 6px solid #c60;
+            /* 直角三角形 */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto quam minima sed modi nam aliquam velit impedit eaque beatae autem.</p>
+            </div>
+            <div class="tag">新課上架</div>
+        </div>
+
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto quam minima sed modi nam aliquam velit impedit eaque beatae autem.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto quam minima sed modi nam aliquam velit impedit eaque beatae autem.</p>
+            </div>
+            <div class="tag">新課上架</div>
+        </div>
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto quam minima sed modi nam aliquam velit impedit eaque beatae autem.</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

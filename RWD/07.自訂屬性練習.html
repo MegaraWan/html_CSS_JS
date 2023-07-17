@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        :root{
+            --column-count: 2;
+            /* :root整個頁面都可以使用這個變數 */
+        }
+        .wrap{
+            /* max-width: 1200px; */
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            --column-count: 2;
+            /* 也可以放在某個位子使用 */
+            width: calc((100% / var(--column-count)) - (10px * 2));
+            height: 200px;
+            background-color: #aaa;
+            margin: 10px;
+        }
+        @media screen and (min-width: 768px) {
+           .wrap{
+                width: 720px;
+            }
+           .item{
+                --column-count: 3;
+           } 
+        }
+        @media screen and (min-width: 1024px) {
+            .wrap{
+                width: 960px;
+            }
+           .item{
+                 --column-count: 4;
+           } 
+        }
+        @media screen and (min-width: 1200px) {
+            .wrap{
+                width: 1120px;
+            }
+           .item{
+                --column-count:6;
+           } 
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+
+
+
+</body>
+</html>

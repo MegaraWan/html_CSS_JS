@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        audio 用來向頁面中引入一個外部音頻文件
+            音視頻文件引入時 默認情況下不允許用戶自己控制播放停止
+        屬性 controls 是否允許用戶控制播放
+            autoplay 音頻文件自動播放
+                -如果設置了autoplay 音樂會再打開頁面時自動播放
+                但目前來講大部分遊覽器都不會自動對音樂進行播放
+            loop 音樂是否循環播放
+    -->
+    <audio src="./source/KatyPerryChainedToTheRhythm1.mp3" controls autoplay loop></audio>
+    <!--
+        除了通過src來指定外部文件的路徑以外 還可以通過 source來指定文件
+        可以插入多個語音格式 遊覽器會自動選擇自己可以使用的格式 
+        
+        如果都不能使用 用source指定位置 這樣遊覽器不支持語法的時候可以顯示文字
+        也可以使用embed 來讓以前版本的遊覽器顯示音樂 但要特別設定長寬 去配合不同版本遊覽器顯示效果
+        兩個擇一 ～～～ 不然舊版本的遊覽器會文字跟embed都顯示
+        
+    -->
+    <audio controls> 
+        您的遊覽器不支持播放音頻 請升級遊覽器
+        <source src="./source/KatyPerryChainedToTheRhythm1.mp3">
+        <source src="./source/KatyPerryChainedToTheRhythm1.ogg">
+        <embed src="./source/KatyPerryChainedToTheRhythm1.mp3" type="audio/mp3" width="300" height="300">
+    </audio>
+
+    <!--
+        用video標籤來向遊覽器來引入一個視頻
+        -使用方式和audio基本上是一樣的
+    -->
+    <video controls>
+        <source sre="">
+        <embed src="" type="video/map4">
+    </video>    
+    <video controls width="250" autoplay="ture" autoplay muted>
+        <!-- 後來版本規定沒有設定靜音muted不能自動播放 -->
+            <source src="webm">
+            <source src="mp4">
+            <!-- webm先寫 因為檔案比MP4好，照順序讀檔案(只選一個) -->
+        </video>
+        
+    <!--
+        以上如果要讓用戶點開網站有音樂跟視頻，維護成本太大 所以通常都會用第三方網站來插入影音及視頻
+    -->
+    
+    <iframe src="https://youtu.be/bo_efYhYU2A" frameborder="0" width="500" height="300"> </iframe>
+    
+    
+
+
+</body>
+</html>

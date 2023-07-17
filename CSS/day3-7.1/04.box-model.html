@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0
+        }
+        .box{
+            background-color: #fa0;
+            font-size: 20px;
+            width: 200px;
+            /* 
+                width 作用在content-box上
+                所以寬200/20=10
+                10個字一行，滿了到下一行 
+            */
+            padding: 20px;
+            /* 文字外框橘色到灰色距離 */
+
+            border: 20px solid #aaa;
+
+            margin: 20px;
+            /* 灰色外面 */
+
+            /* 到這邊以上的物件大小 200+(20+20+20)*2=320 */
+
+            box-sizing: border-box;
+            /* 
+                新增了box-sizing 改變了width的作用位子
+                變成border裡面的物件大小總共200px+20*2margin
+             */
+        }
+    </style>
+</head>
+<body>
+    <!--  -->
+    <div class="box">
+        一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十
+    </div>
+</body>
+</html>

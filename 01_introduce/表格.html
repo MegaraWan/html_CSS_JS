@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>   
+    <!-- td資料 th欄或列的標題 表格都是橫向排列 -->
+    <table width="400" border="3">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>國文</th>
+                <th>英文</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>小美</th>
+                <td>100</td>
+                <td>80</td>
+            </tr>        
+            <tr>
+                <th>小明</th>
+                <td>60</td>
+                <td>70</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>備註</th>
+                <td colspan="2" rowspan="2">資料</td>
+                <!-- 合併儲存格 colspan跨欄 rowspan跨列 -->
+            </tr>
+            <tr>
+               <th>備註</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+    </body>
+</html>

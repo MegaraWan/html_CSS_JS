@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .list{
+            width: 960px;
+            margin: auto;
+            border: 10px solid red;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            /* 這樣內容物大小不依還是可以自動對齊 */
+            gap: 30px;
+        }
+        .card{
+            border: 1px solid #000;
+        }
+        /* 父層設定了網格這樣就不用算子物件內容物的寬，會幫忙自動填滿 */
+
+        .card img{
+            width: 100%;
+        }
+        .card .txt{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="list">
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit, amet consectetur  sit, amet consectetur  sit, amet consectetur  sit, amet consectetur  sit, amet consectetur  sit, amet consectetur  sit, amet consectetur  sit, amet consectetur adipisicing elit. Placeat, repellendus nostrum unde facere eveniet inventore!
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, repellendus nostrum unde facere eveniet inventore!
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, repellendus nostrum unde facere eveniet inventore!
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit, ame sit, amet consectetur  sit, amet consectetur  sit, amet consectetur tur adipisicing elit. Placeat, repellendus nostrum unde facere eveniet inventore!
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, repellendus nostrum unde facere eveniet inventore!
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, repellendus nostrum unde facere eveniet inventore!
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic">
+                <img src="https://picsum.photos/300/200/?random=10">
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, repellendus nostrum unde facere eveniet inventore!
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

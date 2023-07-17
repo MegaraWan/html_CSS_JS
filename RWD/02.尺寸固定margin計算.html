@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap{
+            /* width: 1200px; */
+            width: 90%;
+            margin: auto;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            /* height: 200px; */
+            /* 高度一般不寫，這樣縮放才不會內容超過卡片高 */
+            background-color: #aaa;
+            
+            border:2px solid red;
+            padding: 15px;
+            box-sizing:border-box;
+            /* 用box-sizing，
+            這樣底下計算width的時候
+            就不用在減border的尺寸 */
+
+            width: calc(25% - 20px);
+            /* 使用calc屬性-margin*2 */
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum velit maxime mollitia neque! Odit sequi est iure velit, excepturi ipsum? Illo quia explicabo excepturi unde ipsam accusantium voluptatem ullam voluptatum?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis sunt vel ullam laboriosam amet, quas id quae sint at! Aut nostrum, maiores natus sed dolor consequuntur a veritatis saepe quasi!</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque similique architecto, cum, minima error iusto perspiciatis quo laudantium deleniti aperiam numquam magnam ut harum? Perspiciatis doloribus eaque laudantium eum suscipit.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate itaque eaque laboriosam atque ut explicabo molestiae nesciunt velit, consectetur voluptatum, error, quasi consequuntur rerum labore illum nulla quia odio. Magni?</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus pariatur velit molestiae laudantium architecto officia corporis eligendi labore dolor maxime, itaque fugiat dolores quibusdam possimus quis optio cum. Fugiat, molestias?</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa illo earum nobis voluptas voluptatem deserunt ab. Minus possimus laudantium odit ipsa corrupti? Ex natus aspernatur blanditiis iure beatae. Culpa, minima!</div>
+    </div>
+
+</body>
+</html>

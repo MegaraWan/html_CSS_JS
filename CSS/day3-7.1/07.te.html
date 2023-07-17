@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 500px;
+            height: 500px;
+            background-color: #aaa;
+            display:flex;
+            /* 預設不會換行 這樣尺寸計算會有問題 */
+            flex-wrap:wrap;
+            /* 加上wrap這樣超過父層尺寸才會換行 */
+        }
+        .item{
+            width:150px;
+            height: 150px;
+            background-color: #f00;
+            margin: 5px;
+
+            /*通常不會設定高度
+            不然內文萬一太多會跑出框框
+            可以設定最小高度:min-high
+            這樣縮放頁面的時候即使文字超出格子
+            格子也會自動變大*/
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+
+</body>
+</html>

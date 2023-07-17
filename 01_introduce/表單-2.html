@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label .box {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            border: 1px solid #000;
+        }
+
+        label .box .icon {
+            display: block;
+            transform: scale(0);
+            transition: .3s;
+        }
+
+        [type="radio"] {
+            display: none;
+        }
+
+        [type="radio"]:checked+.box .icon {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- radio預設點點 改成框框勾勾用CSS更改 -->
+    <form action="">
+        <div>
+
+            <label>
+                <input type="radio" name="marry" id="">
+                <span class="box">
+                    <span class="icon">✔</span>
+                </span>
+                已婚
+            </label>
+
+            <label>
+                <input type="radio" name="marry" id="">
+                <span class="box">
+                    <span class="icon">✔</span>
+                </span>
+                未婚
+            </label>
+
+            <label>
+                <input type="radio" name="marry" id="">
+                <span class="box">
+                    <span class="icon">✔</span>
+                </span>
+                乾逆闢室
+            </label>
+        </div>
+</body>
+
+</html>

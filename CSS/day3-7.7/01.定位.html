@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    css 撰寫位置
+    reset
+
+    box-model 物件的尺寸計算方式
+    inline行  block區塊
+    flex
+
+    grid
+
+    p.380
+    position屬性 指定物件看要參考哪個空間去位置的設定跟偏移
+            static 靜態定位 把其他人設定為無效 少用
+
+            下列三個比較常用:
+            relative 相對:自己原始(資料流)的位置偏移顯示，
+            還是有佔據原本的空間
+            fixed 固定:視窗的範圍
+            absolute 絕對:具有定位設定的父層/父父層元素的padding當範圍
+            往父層去找有設定這四個定位的:relative fixed absolute sticky
+            父層沒有一定要設定相對定位，
+            設定其他定位(相對、固定)也可以
+            
+            強制轉型成block
+
+            sticky 黏貼:
+
+    animation
+        transition
+        animation
+
+
+        預設的情況下，兩個元素的重疊是看先後順序，
+        但如果設定定位(position)之後會比沒有設定的還要高
+        
+        都有定位:原始碼順序/z-index大的在上
+        都一樣:HTML原始碼順序/(或z-index一樣)
+        不一樣:
+            1.有定位高於無定位
+            2.z-index大的在上 p.394
+</body>
+</html>

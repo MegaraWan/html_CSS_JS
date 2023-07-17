@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bell{
+            width: 150px;
+            /* border: 1px solid red; */
+            margin: 200px;
+            position: relative;
+            /* 因為設定了tt動畫上下 
+            所以設定了一個相對定位 */
+            transform-origin: center 20px;
+            animation: rr .1s linear infinite alternate,
+                       tt .3s linear infinite alternate;
+        }
+        .bell img{
+            width: 100%;
+            vertical-align: top;
+        }
+
+        @keyframes rr {
+              0%{ transform: rotate(-30deg);}
+            100%{ transform: rotate(30deg);}
+            /* 左右搖晃 */
+        }
+        @keyframes tt {
+              0%{ top: 0; }
+            100%{ top: 100px;}
+            /* 上下搖晃 */
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="bell">
+        <img src="bell.png" alt="">
+    </div>
+
+    
+</body>
+</html>

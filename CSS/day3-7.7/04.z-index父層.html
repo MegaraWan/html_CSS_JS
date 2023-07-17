@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: #fa0;
+            position: relative;
+            z-index: 1;
+        }
+        nav {
+            width: 100%;
+            position: fixed;
+            background: #000;
+            height: 40px;
+            top: 40px;
+            z-index: 3;
+        }
+        /* p.398
+        z-index最終會跟著父層
+        nav在header裡面
+        所以即使這邊設定3
+        實際上還是為1
+        因此.box捲上去的時候蓋住了nav 
+        .box跟header z-index一樣
+        後面蓋前面*/
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: #f00;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi accusantium beatae quis tempore quos asperiores sint aut quae enim corrupti, numquam est culpa itaque fugiat vitae perferendis, incidunt consequatur reiciendis!
+
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </header>
+
+    <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim nihil corporis facere temporibus exercitationem. Maiores consequuntur officia laboriosam error ab dolorum at similique, aperiam rem quaerat iusto, unde, ipsa aliquid.</article>
+    <article>Sequi voluptate voluptatibus animi culpa? Explicabo excepturi nostrum ratione in voluptatibus exercitationem, officiis fugiat laborum earum dicta rem veritatis totam dolor sit adipisci fugit ipsa temporibus deleniti expedita repellendus necessitatibus?</article>
+    <article>Magnam ipsa delectus officiis fuga labore? Cupiditate maiores ipsum quis repellendus nesciunt. Hic ipsa eum nesciunt cupiditate aliquam quis praesentium facilis, illum non porro, quidem iure eveniet consectetur accusamus modi?</article>
+    <article>Nesciunt vitae quae maiores amet eos fuga facere a aut quos quis saepe voluptates sunt, qui provident, voluptatum non earum consequatur esse sint illo adipisci. Repudiandae harum cumque quae recusandae!</article>
+    <article>Nulla, corrupti dolores quod tempore aliquid aperiam quibusdam est qui delectus enim voluptatem soluta minus reiciendis ea laudantium ut iusto deleniti magni tempora rerum quaerat neque ab! Quaerat, voluptatum repellendus.</article>
+    <article>Repellat error quibusdam vitae enim dolor quasi vel repudiandae vero incidunt fuga dignissimos iure, consequuntur assumenda quos ad iste nobis? Ipsum laborum quisquam, vero recusandae perferendis molestias modi aspernatur nobis?</article>
+    <article>Eaque omnis asperiores corrupti. Commodi eius quas odit vitae. Eveniet inventore sequi ipsa veniam in minima omnis, doloribus saepe eos. Consequuntur possimus consequatur, ullam id quos dignissimos vero voluptatum placeat.</article>
+    <article>Beatae dolores tempora dolorum illum temporibus, praesentium rerum porro eligendi debitis voluptatibus odio, dolorem consectetur id deleniti distinctio corrupti nulla! Nostrum aliquid quam cum aliquam quas ut dicta officiis consequuntur.</article>
+    <article>Quasi et minima laboriosam. Blanditiis ab, vero repellendus numquam distinctio accusantium amet quod quo ipsam voluptas, repudiandae a accusamus molestias! Reprehenderit earum aliquid qui, deleniti velit quidem magnam eaque optio.</article>
+    <article>Facilis iusto illo ullam quos, rem facere unde praesentium odit qui eius sint saepe itaque? Facere tempora quasi illo ex non, eius perferendis omnis necessitatibus ratione officia! Dolorem, officiis! Enim.</article>
+    <article>Exercitationem quod, eius impedit iure nihil mollitia, magnam atque ducimus perferendis vitae dignissimos? Fugiat quia repudiandae tenetur ea beatae laborum cum, rerum sequi, aut minus distinctio odio, ratione omnis quae.</article>
+    <article>Animi eligendi ipsa eos aliquam ut voluptates, ea totam velit similique itaque ullam reiciendis nemo, mollitia beatae perferendis cum optio placeat ratione eius facilis quos esse ex aliquid exercitationem. Cumque.</article>
+    <article>Nisi quae fugiat corrupti, laudantium fuga maxime repudiandae quibusdam eius, beatae libero excepturi id animi aliquam autem officiis pariatur ab veniam reprehenderit? Accusamus velit nihil, harum repellat sapiente ipsa quidem.</article>
+    <article>Nemo enim earum libero totam beatae mollitia explicabo doloribus dolore, modi facilis pariatur quos! Quam laborum, est, molestias illo pariatur architecto, soluta itaque et dolorem molestiae incidunt obcaecati reiciendis minima.</article>
+    <article>Quasi, placeat. Facere tenetur similique accusamus ipsam iusto! Eligendi velit sapiente laborum molestiae quas facere, vero sint? Ex rerum iure ducimus. Quidem ullam minus autem obcaecati nisi! Harum, deleniti sequi.</article>
+    <article>Voluptatem quisquam tenetur deleniti iusto sunt quasi unde, nam id beatae consectetur esse quam, ut dicta atque provident hic repellendus, aliquam nulla architecto debitis minus! Sit pariatur minima recusandae accusamus.</article>
+    <article>Velit, animi doloremque magnam voluptates doloribus dolorum ullam tempora quod et pariatur. Neque harum velit molestias, sed praesentium error doloribus officia debitis doloremque culpa, expedita, deleniti et? Fuga, optio quae.</article>
+    <article>Maiores dicta possimus, delectus cumque illo doloremque eaque ad dolorem beatae, itaque libero perferendis quisquam dolore esse aut optio ex sed, nemo ipsa aliquam ducimus enim! Corporis earum cupiditate dolorem?</article>
+    <article>Magni fugit possimus exercitationem praesentium tenetur quae, accusantium consectetur quis rerum culpa distinctio, laboriosam nostrum, officia itaque harum autem pariatur quibusdam dicta repudiandae deserunt. Deleniti, consequatur. Quia, molestiae. Eum, ab!</article>
+    <article>Ad voluptatum corporis nihil nisi, non adipisci suscipit numquam, accusamus voluptatem dicta, distinctio laborum recusandae? Deserunt nam minus voluptatem, temporibus, perspiciatis, quisquam soluta ab placeat labore libero rem dicta aperiam?</article>
+    <article>Sequi eligendi fugit corporis ratione, aperiam voluptas? Ipsam sunt, ullam cumque repudiandae aperiam architecto illo tempora fuga eum commodi enim. Veniam consequatur voluptatibus architecto dolores suscipit necessitatibus nostrum adipisci excepturi!</article>
+    <article>Fugit id rem quasi aliquam earum quis odit itaque numquam non ducimus doloribus tempore eligendi aspernatur minima sit voluptates ea quos veritatis, iste animi cum eius dolorem pariatur nemo. Eaque.</article>
+    <article>Nisi esse, laudantium dolore earum cumque saepe explicabo. Quas voluptatum cumque ea dolor. Quam nobis eveniet autem obcaecati placeat minima ut eligendi quis alias. Quae in blanditiis voluptatem officia rerum!</article>
+    <article>Amet modi itaque veritatis sit ullam eaque, exercitationem fuga odit optio debitis quibusdam inventore atque excepturi libero! Exercitationem, sequi, hic nisi aliquid quidem, odit qui possimus aperiam voluptas quaerat laborum.</article>
+    <article>Quae asperiores itaque dignissimos quidem mollitia culpa facere pariatur, odio, aliquam praesentium excepturi architecto et. Perspiciatis saepe, vitae corrupti accusamus cum animi totam? Ullam repellat nihil deleniti necessitatibus est nam?</article>
+    <div class="box">box</div>
+    <article>Consectetur veniam temporibus voluptas dicta. Autem, quo ipsum. Ducimus sequi velit assumenda minus consectetur consequatur incidunt nisi? Non magnam molestiae laborum debitis praesentium repellat voluptatem labore, odit voluptatum, possimus voluptatibus?</article>
+    <article>Eius et aut tenetur ipsam assumenda aperiam nulla voluptatum modi quam ad officia non, enim in expedita sequi obcaecati. Officiis, quod blanditiis reiciendis quam deleniti amet sunt optio at corrupti.</article>
+    <article>Suscipit, minima? Impedit, odit corrupti. Quod explicabo corporis voluptatum veniam, illo error pariatur minima assumenda ut beatae voluptas vitae quisquam ducimus rem a qui cum, nisi tempore earum neque voluptates!</article>
+    <article>Minima veritatis officiis tenetur rerum veniam. Aliquid ducimus ipsa rerum tempore perspiciatis atque eaque quod corrupti consequuntur iure voluptate, architecto rem veniam pariatur repudiandae ut veritatis corporis et tempora molestiae!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+    <article>Quia et, perspiciatis repellendus aut ducimus aperiam reiciendis nemo eveniet a esse saepe quas deserunt corporis nostrum minus atque necessitatibus est error eos aliquam similique libero pariatur. Consectetur, porro obcaecati!</article>
+
+
+    
+</body>
+</html>

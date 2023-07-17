@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .arrow{
+            width:50px;
+            height:50px;
+            border-top:30px solid #f00;
+            Border-right:30px solid #0f0;
+            border-bottom:30px solid #00f;
+            border-left:30px solid #666;
+        }
+        .arrow-0{
+            width:0px;
+            height:0px;
+            border-top:30px solid #f00;
+            Border-right:30px solid #0f0;
+            border-bottom:30px solid #00f;
+            border-left:30px solid #666;
+        }
+        /* 把高度寬度拿掉 */
+        
+        .arrow-bottom{
+            width:0px;
+            height:0px;
+           
+            Border-right:30px solid #0f0;
+            border-bottom:30px solid #00f;
+            border-left:30px solid #666;
+        }
+        /* 把上邊框線top拿掉 */
+
+        .arrow-t{
+            width:0px;
+            height:0px;
+           
+            Border-right:30px solid #0f00;
+            border-bottom:30px solid #00f;
+            border-left:30px solid transparent;
+            ;
+            /* 把左右設定透明
+            透明: #0f00 transparent #660 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="arrow"></div>
+    <br>
+    <div class="arrow-0"></div>
+    <p>把高度寬度拿掉</p>
+    <br>
+    <div class="arrow-bottom"></div>
+    <p>把上邊框線拿掉</p>
+    <br>
+    <div class="arrow-t"></div>
+    <p>把左右設定透明</p>
+</body>
+</html>

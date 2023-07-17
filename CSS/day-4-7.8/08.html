@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 300px;
+            border: 1px solid #000;
+        }
+        .card .pic{
+            overflow: hidden;
+            /* 超過框線的部分隱藏 */
+        }
+        .card .pic img{
+            width: 100%;
+            vertical-align: top;
+            transform: scale(1);
+        }
+        .card:hover img{
+            transition: 20s;
+            transform: scale(1.3);
+            /* card是容器 把效果設定在容器上
+            才不會有移動的時候摸不到原本物件
+            而產生的動畫有點不連動的問題*/
+        }
+        .card .txt{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="card">
+        <div class="pic">
+            <img src="https://picsum.photos/300/200/?random=10">
+        </div>
+        <div class="txt">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, magni praesentium laborum facere pariatur, atque corporis nam suscipit ex tempore, dicta architecto consequatur. Et, explicabo necessitatibus. Est aliquid corrupti voluptas!</p>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

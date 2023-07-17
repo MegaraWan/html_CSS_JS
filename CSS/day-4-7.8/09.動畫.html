@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background-color: #666;
+            font-size: 50px;
+            color: #fff;
+            position: relative;
+        }
+
+        .box1 {
+            animation-name: ;
+            animation-duration: ;
+            animation-delay: ;
+            animation-timing-function: ;
+
+            animation-iteration-count: ;
+            animation-direction: ;
+            animation-fill-mode: ;
+            animation-play-state: ;
+            /* 照順序變成以下 P.453*/
+            animation: move .4s 0s ease infinite alternate-reverse;
+            /* infinite 無限播放 */
+        }
+        .box2 {
+            /* animation: move .3s .15s ease 4; */
+        }
+
+        @keyframes move {
+              0%{ left: 0;}
+            100%{ left: 300px;}
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+
+    
+</body>
+</html>

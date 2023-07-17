@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 300px;
+            border: 1px solid #000;
+        }
+        .card .pic{
+            position: relative;
+            overflow: hidden;
+        }
+        .card .pic img{
+            width: 100%;
+            vertical-align: top;
+            transform: scale(1);
+        }
+        .card .pic::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            /* background-color: #0008; */
+            background-image: radial-gradient(ellipse at center center, transparent, #0008);
+            opacity: 0;
+            transition: 1s;
+        }
+        .card:hover .pic::after{
+            opacity: 1;
+        }
+        .card:hover img{
+            transition: 20s;
+            transform: scale(1.3);
+        }
+        .card .txt{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="card">
+        <div class="pic">
+            <img src="https://picsum.photos/300/200/?random=10">
+        </div>
+        <div class="txt">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, magni praesentium laborum facere pariatur, atque corporis nam suscipit ex tempore, dicta architecto consequatur. Et, explicabo necessitatibus. Est aliquid corrupti voluptas!</p>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

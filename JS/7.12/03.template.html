@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keyword" content="HTML,CSS,Javascript">
+<title>Examples</title>
+
+<style>
+	h2 {
+		color:deeppink;
+	}
+</style>
+
+</head>
+
+<body>
+
+<h2>從前從前.....</h2>
+<script>
+var name = "Adam";	
+var hireDate = "2000-02-02";
+document.write("<table border='1'>");	
+document.write("<tr><th>姓名</th><td>" + name + "</td></tr>");
+document.write("<tr><td>到職日</th><td>" + hireDate + "</td></tr>");
+document.write("</table>");
+</script>
+
+
+<h2>ES6之後</h2>
+<script>
+var html = `<table border='1'>
+	<tr><th>姓名</th><td>${name}</td></tr>
+	<tr><th>到職日</th><td>${hireDate}</td></tr>
+</table>`;
+document.write( html, "<br>");	
+</script>
+</body>
+</html>

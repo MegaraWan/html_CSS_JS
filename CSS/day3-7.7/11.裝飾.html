@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: #ccc;
+            font-size: 32px;
+        }
+        p::before{
+        /* 黏著要產出的元素所以P後面不要空格 */
+            content: '這是before的文字';
+            /* 裝飾的物件 滑鼠選不到 */
+            color: red;
+        }
+        p::after{
+            content: '這是after的文字';
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <p>內容</p>
+
+
+    
+</body>
+</html>

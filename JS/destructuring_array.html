@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+</head>
+
+<body>
+<script type="text/javascript">
+//陣列解構賦值
+var arr = [11, 22, 33];
+var [a, b] = arr;
+
+var arr = [11, 22, 33];
+//對應不到會得到undefined
+var [aa, bb, cc, dd] = arr;
+
+//對應不到, 可以給預設值
+var [aaa, bbb, ccc, ddd=100] = arr;
+
+//可以跳過某些值不要
+var [x, , y] = arr;
+console.log(x, y);
+
+//可以利用陣列解構來做變數交換
+var a = 10;
+var b = 20;
+var [a, b] = [b, a];
+
+var arr = [11, 22, 33];
+[arr[1], arr[0]] = [arr[0], arr[1]];
+console.log(arr);
+
+document.write("dd: " , dd , "<br>");
+document.write("ddd : ", ddd, "<br>");
+
+//...在=號左側(rest, 將解構剩餘元素給另一陣列)
+var arr = [11, 22, 33, 44, 55, 66, 77];
+var [xx, yy, ...arr2] = arr;
+
+//...在=號右側(spread, 將陣列解構展開)
+var arr = [11, 22];
+var x = 10;
+var arr2 = [...arr, x];
+document.write( arr2, "---<br>");
+
+//------------將陣列解構展開後傳給參數
+function sum( a, b, c){
+	return a+b+c;
+}
+var numbers = [11,22,33];
+document.write("total : ", sum(...numbers),"<br>");
+
+//------------陣列解構賦值搭配預設值
+//?????
+
+//------------陣列解構賦值rest parameter
+
+
+
+//------------陣列展開後傳給函式的參數(spread)
+function sum( a, b, c){
+	return a+b+c;
+}
+
+var numbers = [11,22,33];
+document.write("total : ", sum(...numbers),"<br>");
+// var numbers = [11,22,33];
+// document.write("1---total = ", sum( numbers[0], numbers[1], numbers[2]) , "<br>");
+// document.write("2---total = ", "<br>"); //?????
+
+
+
+</script>    
+</body>
+</html>

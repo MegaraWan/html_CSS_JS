@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        P{
+            background-color: #ccc;
+            font-size: 32px;
+        }
+        P::before{
+            content:'這是before的文字';
+            /* 單引號''雙引號""都可以' */
+            color:red;
+        }
+
+        P::after{
+            content:'這是after的文字';
+            /* 單引號''雙引號""都可以' */
+            color:red;
+        }
+
+        /* before跟after裝飾用，
+        網頁在選取的時候選取不到
+        都在P標籤裡面黏著內文*/
+    </style>
+</head>
+<body>
+    <p>內容</p>
+</body>
+</html>

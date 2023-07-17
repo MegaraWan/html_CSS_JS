@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: #f00;
+            clip-path: polygon(x   y, x     y, x    y);
+            clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+        }
+        /* clip-path連接座標繪製遮罩區域，
+        就可以做出許多不同的形狀
+         polygon 直線
+         circle圓形 */
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+
+
+    
+</body>
+</html>

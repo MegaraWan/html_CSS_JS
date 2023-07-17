@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 表單
+     input標籤
+     type屬性(在手機上面會幫忙自動選取適合的鍵盤):
+     text 搜尋search 密碼password
+     信箱email 網址url
+     number 電話tel
+     日期date 時間time 週week
+     複選checkbox 單選radio
+     檔案file 圖片image 隱藏欄位hidden 色彩color 區間range
+     提交submit 重設reset button
+
+
+     留言textarea 選單option
+    -->
+
+    readonly僅供閱讀 required 必填
+    <form action="">
+        <!-- label行內元素 不會換行 -->
+        <label for="user_name">帳號</label>
+        <input id="user_name" type="text">
+
+        <label>
+            密碼
+            <input type="password">
+        </label>
+        <!-- password隱藏字元 -->
+
+        <!-- for屬性連結到input的id 滑鼠點擊:姓名會直接到輸入框框
+        也可以把for省略 label包住input -->
+        <div>
+            <label for="">帳號</label>
+            <input id="" type="text" minlength="6" maxlength="10">
+        </div>
+        <div>
+            <label for="">search</label>
+            <input id="" type="serch">
+        </div>
+        <div>
+            <label for="">密碼</label>
+            <input id="" type="password">
+        </div>
+        <!-- --------------------------------------- -->
+        <div>
+            <label for="">信箱</label>
+            <input id="" type="email">
+        </div>
+        <div>
+            <label for="">網址</label>
+            <input id="" type="url">
+        </div>
+        <!-- --------------------------------------- -->
+        <div>
+            <label for="">歲數</label>
+            <input id="" type="number" min="18" max="60">
+        </div>
+        <div>
+            <label for="">tel</label>
+            <input id="" type="tel">
+        </div>
+        <!-- --------------------------------------- -->
+        <div>
+            <label for="">日期:</label>
+            <input id="" type="date">
+        </div>
+        <div>
+            <label for="">時間:</label>
+            <input id="" type="time">
+        </div>
+        <div>
+            <label for="">周:</label>
+            <input id="" type="week">
+        </div>
+        <!-- --------------------------------------- -->
+        <div>
+            興趣:
+            <label>
+                <input id="" type="checkbox">
+                釣魚
+            </label>
+            <label>
+                <input id="" type="checkbox">
+                上網
+            </label>
+        </div>
+        <div>
+            性別:
+            <label>
+                <input id="" type="radio" name="sex">
+                男
+            </label>
+            <label>
+                <input id="" type="radio" name="sex">
+                女
+            </label>
+            <label>
+                <input id="" type="radio" name="sex">
+                不明
+            </label>
+        </div>
+        <!-- radio設定同樣的name就可以做成單選 -->
+
+        <!-- --------------------------------------- -->
+        <div>
+            <label for="">檔案:</label>
+            <input id="" type="file">
+        </div>
+        <div>
+            <label for="">圖片:</label>
+            <input id="" type="image">
+        </div>
+        <div>
+            <label for="">隱藏欄位:</label>
+            <input id="" type="hidden">
+        </div>
+        <div>
+            <label for="">色彩:</label>
+            <input id="" type="color">
+        </div>
+        <div>
+            <label for="">區間:</label>
+            <input id="" type="range">
+        </div>
+        <!-- --------------------------------------- -->
+        <div>
+            <input id="" type="submit">
+        </div>
+        <div>
+            <input id="" type="reset">
+        </div>
+
+        <div>
+            <input id="" type="button" value="input button">
+        </div>
+        <div>
+            <button>button tag</button>
+        </div>
+    </form>
+
+
+    <!-- --------------------------------------- -->
+    <div>
+        <label for="">留言:</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+        <label for="">選擇</label>
+        <select name="" id="">
+            <option value="">請選擇</option>
+            <option value="">台北市</option>
+            <option value="">新北市</option>
+            <option value="">桃園市</option>
+        </select>
+    </div>
+</body>
+
+</html>

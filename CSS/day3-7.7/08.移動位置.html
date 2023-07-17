@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 300px;
+            border: 10px solid #f00;
+            position: relative;
+            overflow: hidden;
+            /* 讓超出卡片的區域隱藏
+            transform: translateY(100%) 
+            的地方隱藏 */
+        }
+        .card .pic img{
+            width: 100%;
+            /* vertical-align: top; */
+            display: block;
+        }
+        .card .txt{
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px;
+            color: #fff;
+            transform: translateY(100%) ;
+            transition: .5s;
+        }
+        .card:hover .txt{
+            transform: translateY(0%);
+            /* 摸到的時候位子改回去，
+            在卡片裡面，所以資料有跑出來 */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="card">
+        <div class="pic">
+            <img src="https://picsum.photos/300/200/?random=10">
+        </div>
+        <div class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus beatae incidunt voluptates
+        </div>
+    </div>
+
+
+
+</body>
+</html>

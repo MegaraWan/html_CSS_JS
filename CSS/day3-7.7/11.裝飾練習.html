@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .msg{
+            background-color: #afa;
+            padding: 20px;
+            width: 300px;
+
+            position:relative;
+        }
+        .msg::after{
+            content:'';
+            display:block;
+            width:0;
+            height:0;
+
+            position:absolute;
+            
+            top:0;
+            bottom:0;
+            margin:auto;
+            /* 置中 */
+
+            /* right: -30px;*/
+            /* 讓他凸出去 因為三角形大小是30
+            不想算大小可以用下面的方式 */
+            right:0px;
+            transform:translateX(100%);
+
+            border-top:30px solid #0f00;
+            border-bottom:30px solid #0f00;
+            border-left:30px solid #000;
+        
+
+        }
+    </style>
+</head>
+<body>
+   <div class="msg">
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ad quibusdam alias aliquam voluptatibus ex voluptatum labore, hic, sit dolorum non, quo autem fugiat. Voluptate ut similique saepe beatae a?
+    </p>
+</div>
+</body>
+</html>

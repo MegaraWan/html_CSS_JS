@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap{
+            /* width: 1200px; */
+            width: 100%;
+            margin: auto;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            height: 200px;
+            background-color: #aaa;
+            width: 280px; /* 280 / 1200 * 100 */
+            margin: 10px; /* 10 / 1200 * 100 */
+            width: 23.333333%;
+            margin: 0 0.833333%;
+            /* 寫一個就好了下面那個會蓋掉前面那個 */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+</body>
+</html>

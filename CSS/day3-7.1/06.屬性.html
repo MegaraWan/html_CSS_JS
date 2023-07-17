@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            margin:100px 0;
+            background-color: #fa0;
+           
+            font-size: 0;
+            /* 因為行內元素會有空白字元問題
+            先把內容物的大小都設成0
+            再去內文把文字設定成要的大小
+            這樣行元素之前的空白Enter的部分
+            才不會顯示出來*/
+        }
+        nav a{
+            background-color:#f00;
+           
+            padding-top:50px;
+            padding-bottom:50px;
+            /* 雖然padding會顯示出來
+            但其實是沒有佔到空間的
+            這樣到時候計算距離會有問題
+            (最下面的more當範例)
+            所以當作沒有效果
+            不要這樣使用 */
+
+            font-size:20px;
+            /* 因為行內元素會有空白字元問題
+            先把內容物的大小都設成0
+            再去內文把文字設定成要的大小
+            正樣行元素之前的空白Enter的部分
+            才不會顯示出來*/
+        }
+        .box{
+            background-color: #ccc;
+        }
+        .box p{
+            margin-bottom: 100px;
+        }
+        .box .btn{
+            background-color: #fa0;
+            color:#fff;
+            text-decoration:none;
+
+            padding: 20px 30px;
+            /* 像這樣行內元素 
+            有設定上下20px
+            但兼具有重疊
+            這樣很難算尺寸*/
+        }
+    </style>
+</head>
+<body>
+    <img src="基本位子.jpg" alt="">
+    <nav>
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+    </nav>
+    <div class="box">
+        <p>
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. 
+            Porro omnis commodi explicabo tempora 
+            pariatur itaque! Modi quibusdam deleniti iure? Quibusdam!
+        </p>
+        <a href="#" class="btn">More</a>
+    </div>
+</body>
+</html>
