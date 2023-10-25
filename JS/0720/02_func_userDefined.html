@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keyword" content="HTML,CSS,Javascript">
+<title>Examples</title>
+<style>
+	h2 {
+		color:deeppink;
+	}
+</style>
+</head>
+
+<body>
+	<!-- p.96 -->
+<h2>没有參數也没有傳回值</h2>
+<script>
+function  sayHello(){
+	document.write(  "Hello ~<br>");
+	return;
+}
+sayHello();
+</script>
+
+<h2>有參數也没有傳回值</h2>
+<script>
+function sayHelloToSomeone(name){
+	document.write( `${name}, 早安~` ,"<br>");
+}
+sayHelloToSomeone("詩諭");
+sayHelloToSomeone("健瑋");
+</script>
+
+
+<h2>------------有參數, 有傳回值</h2>
+<script>
+function sum(a, b){ 
+	var total = a + b;
+	return total;
+}
+document.write( "10+20=", sum(10,20), "<br>"); //10+20=30<br>
+
+var x = 100, y = 200;
+document.write(`${x} + ${y} = ${sum(x, y)}`  ,"<br>");
+</script>
+
+<h2>arguments</h2>
+
+<script>
+	// p.98 函式重新定義 後面會蓋掉前面 function sum(a, b, c) 蓋掉 function sum(a, b)
+function sum(a, b){ //a, b是參數, 稱為parameter 
+	var total = 0;  
+	//改寫下段程式
+	total = a + b;
+
+	return total;
+}
+
+function sum(a, b, c){ 
+	// p.99
+	//狀況1 ,arguments : 10, 20, arguments.length:2, arguments[0]->10, arguments[1]->20
+	//狀況2 ,arguments : 10, 20, 30, arguments.length:3,arguments[0]->10,arguments[1]->20, arguments[2]->30
+	var total = 0;  
+	// 	total = a + b + c;
+	//改寫下段程式
+	for(let i=0; i<arguments.length; i++){
+		total += arguments[i];
+	}
+
+	return total;
+}
+
+document.write("10 + 20 =", sum( 10, 20), "<br>");
+ //10, 20是引用的資料, 稱為引數(argument)
+document.write("10 + 20 + 30 =", sum( 10, 20, 30), "<br>");
+document.write("10 + 20 + 30 + 40=", sum( 10, 20, 30, 40), "<br>");
+</script>
+
+<h2>參數給預設值------從前...</h2>
+<script>
+function showMsg(message){  
+	message = message || "Hello~";
+	document.write( message, "<br>");
+}
+
+showMsg("禱告~"); 
+showMsg();
+</script>
+
+<h2>參數給預設值------ES6</h2>
+<script>
+function showMsg(message="Hello~"){  //
+	document.write( message, "<br>");
+}
+
+showMsg("禱告~");
+showMsg(); //沒給資料就會給預設值Hello~
+</script>
+
+<h2>避免和全域方法同名</h2>
+<!-- p.99 -->
+<script>
+window.alert("test........1");
+alert("test...........2");	
+//因為底下這個函數會蓋掉前面的
+function alert(msg){
+	document.write( msg, "<br>");
+}	
+</script>
+<!--  -->
+
+<h2>rest parameter</h2>
+<script>
+function restParam(a, b, ...array){
+	console.log("a : ", a); //11
+	console.log("b : ", b); //22
+	
+	array.push(1000);
+	console.log(array); //[33, 44, 55, 66]
+
+	//arguments.push(2000); //此行會error 因為arguments不是陣列是個物件
+	console.log(arguments);//11, 22, 33, 44, 55, 66
+}	
+
+restParam(11, 22, 33, 44, 55, 66);
+</script>
+</body>
+
+<h2>rest parameter-----應用</h2>
+<script>
+function sum(...array){//array[10, 20, 30] //---------
+	var total = 0;  
+	//改寫下段程式
+	for(let i=0; i<array.length; i++){
+		total += array[i];
+	}
+
+	return total;
+}
+
+document.write("10 + 20 =", sum( 10, 20), "<br>"); 
+document.write("10 + 20 + 30 =", sum( 10, 20, 30), "<br>");
+document.write("10 + 20 + 30 + 40=", sum( 10, 20, 30, 40), "<br>");
+</script>
+
+
+<h2>另一個案例應用-----使用arguments</h2>
+<script>
+function sum(){ 
+	var total = arguments[0];  
+	//改寫下段程式
+	for(let i=1; i<arguments.length; i++){
+		total += arguments[i];
+	}
+
+	return total;
+}
+
+document.write(sum(20000, 10, 20), "<br>"); //20030
+document.write(sum(20000, 10, 20, 30), "<br>"); //20060
+document.write(sum(20000, 10, 20, 30, 40), "<br>");	//20100
+</script>
+
+
+<h2>另一個案例應用-----使用rest parameter</h2>
+<script>
+function sum(total, ...array){//--------- 
+	//改寫下段程式
+	for(let i=0; i<array.length; i++){
+		total += array[i];
+	}
+
+	return total;
+}
+
+document.write(sum(20000, 10, 20), "<br>"); //20030
+document.write(sum(20000, 10, 20, 30), "<br>"); //20060
+document.write(sum(20000, 10, 20, 30, 40), "<br>");	//20100
+</script>
+
+</body>
+</html>

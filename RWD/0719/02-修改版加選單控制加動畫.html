@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .main-header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #6af;
+            position: relative;
+        }
+        
+        .main-nav{
+            display: flex;
+        }
+        .main-nav a{
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        #menu-switch{
+            display: none;
+        }
+        @media screen and (max-width: 767px) {
+            .hb label{
+                width: 40px;
+                height: 40px;
+                background-color: #000;
+                display: block;
+                position: relative;
+            }
+            .main-nav{
+                position: absolute;
+                width: 90%;
+                margin: 0 5%;
+                background-color: #fa0;
+                top: 100%;
+                left: 0;
+                flex-direction: column;
+                display: none;
+            }
+            .main-nav a + a{
+                border-top: 1px solid #fff;
+            }
+            #menu-switch:checked + .main-header .main-nav{
+                display: flex;
+            }
+            /* -------------------------------------- */
+            .hb span{
+                width: 80%;
+                height: 4px;
+                background-color: #f00;
+                position: absolute;
+                inset: 0;
+                margin: auto;
+            }
+            .hb span:nth-child(1){
+                translate: 0px -10px;
+                rotate: 0deg;
+                transition: translate 0.3s 0.3s,
+                            rotate 0.3s 0s;
+            }
+            .hb span:nth-child(2){
+                opacity: 1;
+                transition: opacity 0.3s 0.6s;
+            }
+            .hb span:nth-child(3){
+                translate: 0px 10px;
+                rotate: 0deg;
+                transition: translate 0.3s 0.3s,
+                            rotate 0.3s 0s;
+            }
+            #menu-switch:checked + .main-header .hb span:nth-child(1){
+                translate: 0px 0px;
+                rotate: 45deg;
+                transition: translate 0.3s 0.3s,
+                            rotate 0.3s 0.6s;
+            }
+            #menu-switch:checked + .main-header .hb span:nth-child(2){
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            #menu-switch:checked + .main-header .hb span:nth-child(3){
+                translate: 0px 0px;
+                /*rotate: -45deg;*/
+                rotate: 315deg;
+                transition: translate 0.3s 0.3s,
+                            rotate 0.3s 0.6s;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .hb{
+                display: none;
+            }
+            .main-nav{
+                flex-direction: row;
+            }
+        }
+        @media screen and (min-width: 768px) and (hover:hover) {
+            .main-nav a:hover{
+                color: #f00;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-switch">
+    <header class="main-header">
+        <div class="logo">
+            <a href="#">
+                <img src="https://fakeimg.pl/80x40/200">
+            </a>
+        </div>
+        
+        <div class="hb">
+            <label for="menu-switch">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <nav class="main-nav">
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </header>
+
+
+
+</body>
+</html>

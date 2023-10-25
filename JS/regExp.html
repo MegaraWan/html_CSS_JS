@@ -7,13 +7,34 @@
 </head>
 <body>
 <script>
-let re = ;	
-let idNo = "";
-if(true){
+let re = /^[A-Z][12][0-9]{8}$/i;	
+let idNo = "a133456789";
+
+if(re.test(idNo)){
 	document.write(  "正確~<br>");
 }else{
 	document.write(  "錯誤~<br>");
 }
-</script>    
+</script>  
+
+<h2>multiline</h2>
+<script>
+
+let text = `Is this
+all there
+is`;
+
+let pattern = /is/ig;
+
+//let result = pattern.exec(text);
+let result = text.match(pattern);
+
+document.write( "length : ", result.length, "<br>");
+for(let i = 0; i<result.length; i++){
+	document.write( result[i], "<br>");
+}
+
+</script>	
+ 
 </body>
 </html>

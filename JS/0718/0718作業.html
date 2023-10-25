@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            color: deeppink;
+        }
+
+        td {
+            width: 80px;
+            color: blue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>作業9 9prize.html
+        (迴圈, Math練習)
+        摸彩金 : 有11顆彩球, 彩球面額為0-10之間, 若摸到的彩球不為0,則可繼續摸彩,若摸到的彩球為0,則停止摸彩,並計算其摸彩次數及彩金總金額(單位:佰元)
+    </h2>
+    <script>
+
+    </script>
+    <h2>
+        作業10
+        10nestedLoopStar.html： (巢狀迴圈練習)
+        印出
+        *
+        **
+        ***
+        ****
+        *****
+        ******
+    </h2>
+    <script>
+        function printStart(rows) {
+            for (let i = 1; i <= rows; i++) {
+                let start = '<br>';
+                for (let j = 1; j <= i; j++) {
+                    start += '*';
+                }
+                document.write(start);
+            }
+        }
+        printStart(6)
+    </script>
+    <h2>作業11 11nestedLoopStar.html： (巢狀迴圈練習)
+        印出
+        *
+        **
+        ***
+        ****
+        *****
+        ******
+        *****
+        ****
+        ***
+        **
+        *
+    </h2>
+    <script>
+        function printStart2(rows) {
+            let start2 = '';
+    
+            for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= i; j++) {
+                    start2 += '*';
+                }
+                start2 += '<br>';
+            }
+            for (let i = rows - 1; i >= 1; i--) {
+                for (let j = 1; j <= i; j++) {
+                    start2 += '*';
+                }
+                start2 += '<br>';
+            }
+            document.write(start2);
+        }
+        printStart2(6);
+    </script>
+
+    <h2>作業12　12nestedLoop. html： (巢狀迴圈練習)
+        印出
+        1
+        12
+        123
+        1234
+        12345
+        123456
+    </h2>
+    <script>
+        function printNumber(rows) {
+            for (let i = 0; i <= rows; i++) {
+                let number = '<br>';
+                for (let j = 1; j <= i; j++) {
+                    number += j;
+                }
+                document.write(number);
+            }
+        }
+        printNumber(6)
+    </script>
+    <h2>13nestedLoopSum. html：(巢狀迴圈練習)
+        印出
+        1=1
+        1+2=3
+        1+2+3=6
+        1+2+3+4=10
+        …
+        1+2+3+ ……..+10=55
+    </h2>
+    <script>
+        function printNumber2(rows) {
+            let number2 = '';
+            let sum = 0;
+            for (let i = 1; i <= rows; i++) {
+
+                for (let j = 1; j <= i; j++) {
+                    if (j === 1) {
+                        number2 += j;
+                    } else {
+                        number2 += '+' + j;
+                    }
+                    sum += j;
+                }
+                number2 += '=' + sum + '<br>';
+            }
+            document.write(number2);
+        }
+        printNumber2(10);
+    </script>
+    <h2>作業14：14array.html (array練習)
+        隨機產生10個介於1-~100之間的數放在陣列中,
+        印出這10個數, 總和 , 最小值 , 最大值
+    </h2>
+    <button onclick="generateAndPrint()">產生十個隨機數字</button>
+    <div id="output"></div>
+    <script>
+        function generateAndPrint() {
+            const randomArray = generateRandomArray(10, 1, 100);
+            printArrayInfo(randomArray);
+        }
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function generateRandomArray(length, min, max) {
+            const arr = [];
+            for (let i = 0; i < length; i++) {
+                arr.push(getRandomNumber(min, max));
+            }
+            return arr;
+        }
+
+        function printArrayInfo(arr) {
+            const sum = arr.reduce((acc, curr) => acc + curr, 0);
+            const min = Math.min(...arr);
+            const max = Math.max(...arr);
+
+            const output = "隨機的十個數字: " + arr.join(", ") + "\n"
+                + "總和: " + sum + "\n"
+                + "最小值: " + min + "\n"
+                + "最大值: " + max;
+
+            document.getElementById('output').innerText = output;
+        }
+
+        const randomArray = generateRandomArray(10, 1, 100);
+        printArrayInfo(randomArray);
+    </script>
+    <h2>作業 15 : 15lotto.html (Math，迴圈練習，陣列)
+        請寫一段JavaScript的程式,在網頁上隨機產生6個不重覆的大樂透數字(介於1..49之間的數字)
+    </h2>
+    <button onclick="generateLottoNumbers()">隨機產生六個數字</button>
+    <div id="lottoNumbers"></div>
+    
+    <script>
+        function generateLottoNumbers() {
+            let numbers = [];
+            while (numbers.length < 6) {
+                let num = Math.floor(Math.random() * 49) + 1;
+                if (numbers.indexOf(num) === -1) {
+                    numbers.push(num);
+                }
+            }
+    
+            numbers.sort((a, b) => a - b); // 排序數字
+            document.getElementById("lottoNumbers").innerText = numbers.join(", ");
+        }
+    
+        // Call the function immediately to generate the numbers when the webpage loads
+        generateLottoNumbers();
+    </script>
+</body>
+
+</html>

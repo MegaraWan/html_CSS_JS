@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        :root{
+            --col-count: 4;
+        }
+        .wrap{
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col{
+            /* width: 25%; */
+            /* 內容四個div.card的排版100/4=25 */
+            width: calc(100% / var(--col-count));
+
+            padding: 0 10px;
+            box-sizing: border-box;
+            /* 四個div.card外面包一個div
+            這樣設定好外面的div box-sizing
+            就不用每次更改裡面要幾個東西的時候
+            要再重新計算扣多少padding
+            外層padding來當作內層div.card的margin */
+        }
+        .card{
+            height: 200px;
+            /* 子層跟父層寬
+            設定高讓裡面有東西做示範 */
+            background-color: #fa0;
+        }
+
+        @media screen and (min-width: 768px) {
+            .col{
+                /* width: 33.333333%; */
+                --col-count: 3;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            .col{
+                /* width: 25%; */
+                --col-count: 4;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            .col{
+                /* width: 16.666666%; */
+                --col-count: 6;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <!-- 內容假設四個卡片 -->
+        <div class="col">
+            <div class="card"></div>
+        </div>
+        <div class="col">
+            <div class="card"></div>
+        </div>
+        <div class="col">
+            <div class="card"></div>
+        </div>
+        <div class="col">
+            <div class="card"></div>
+        </div>
+        <div class="col">
+            <div class="card"></div>
+        </div>
+        <div class="col">
+            <div class="card"></div>
+        </div>
+    </div>
+
+
+</body>
+</html>

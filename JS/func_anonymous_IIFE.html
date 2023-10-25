@@ -7,23 +7,39 @@
 </head>
 <body>
 <script>
-var msg = "This is a book";
+var msg = "This is a book"; //全域
+//-----------------
 //IIFE
-(function (msg="Hi"){ //避免汚染全域變數, 且用完即丟
+
+
+(function (msg="Hi"){ //避免汚染全域變數, 且用完即丟, 區域:msg
 	msg = msg +"~~~";
 	document.write( `${msg}<br>` );
 })();
 
 msg = msg + "~~~";
+document.write( `${msg}<br>` );
 
-(function (msg="Hi"){
-	msg = msg +"~~~";
-	document.write( `${msg}<br>` );
-})("Hello~");
+</script>
 
-document.write( `outside : ${msg}<br>` );
-// msg = msg + "~~~";
-// document.write( `${msg}<br>` );
-</script>    
+
+<h2>ES6之後</h2>
+<script>
+
+var msg2 = "Welcome to Tibame";
+
+{
+	let msg2 = "Welcome to CHD103";
+	document.write( `msg2 block :${msg2}<br>` );
+}
+
+{
+	let msg2 = "Welcome to my home";
+	document.write( `msg2 block :${msg2}<br>` );
+}
+
+document.write( `msg2 global :${msg2}<br>` );
+	/**/
+</script>
 </body>
 </html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+
+</head>
+<body>
+
+
+<h2>摸到的彩球不為0,則可繼續摸彩, 印出其每次的摸彩金額及彩金總金額(單位:佰元)</h2>
+<script>
+var number, sum = 0, count = 1;
+do{
+    number = parseInt(Math.random() * 11);
+    document.write( `第${count}次, 金額:${number*100}<br>` );
+    sum += number*100; //--------------
+    count ++;
+} while (number !== 0);
+  
+document.write( `彩金總金額:${sum}<br>`);
+</script>
+
+<h2>*****(10, 11)</h2>
+<script>
+for (let i = 1; i <= 6; i++){
+    for (let j=1; j<=i; j++) {
+        document.write(  "*");
+    }
+    document.write(  "<br>");
+}
+for (let i = 5; i >= 1; i--){
+    for (let j=1; j<=i; j++) {
+        document.write(  "*");
+    }
+    document.write(  "<br>");
+}
+</script>
+
+
+<h2>(12)</h2>
+<script>
+for (let i = 1; i <= 6; i++){
+    for (let j=1; j<=i; j++) {
+        document.write(j);
+    }
+    document.write(  "<br>");
+}    
+</script>
+
+
+<h2>(13)1+2+3+ ……..+10=55</h2>
+<script>
+var sum;
+
+for(let i=1; i<=10; i++) { //當i:9
+  sum = 0;
+  for(var j=1; j<i; j++) { //1+2+3+...+8+
+    sum += j;
+    document.write( j, "+");
+  }
+  sum+=j; //for()結束時,j為9,
+  document.write( j, "=" , sum, "<br>");
+}    
+</script>
+
+
+<h2>(13)1+2+3+ ……..+10=55 ----------------------------2</h2>
+<script>
+var sum;
+
+sum = 0;
+for(let i=1; i<=10; i++) { //當i:2
+  
+  for(var j=1; j<i; j++) { //j=1, j<2才做
+    document.write( j, "+");
+  }
+  sum+=i; //for()結束時,i=>1,
+  document.write( j, "=" , sum, "<br>");
+}    
+</script>
+
+
+<h2>隨機產生10個介於1-~100之間的數放在陣列中, 
+印出這10個數, 總和 , 最小值 , 最大值
+</h2>
+
+<script>
+var arr = [];//0, 1, 2, 3, 4,5 ,6, 7, 8, 9
+
+arr[0] = 1 + Math.floor(Math.random()*100); //1<= 1+x <=100; 
+var min = max = arr[0];
+
+for(let i=1; i<10; i++){
+    arr[i] = 1 + Math.floor(Math.random()*100);
+    if(arr[i] > max) { //-----
+        max = arr[i];
+    } else if(arr[i]<min){
+        min = arr[i]
+    }
+
+    //---------------
+    /*
+    if(arr[i] > max) {
+        max = arr[i];
+    } 
+
+    if(arr[i]<min){
+        min = arr[i]
+    }
+    */
+}
+document.write( arr, "<br>");
+document.write("min : ", min, "<br>");
+document.write("max : ", max, "<br>");
+</script>
+</body>
+</html>

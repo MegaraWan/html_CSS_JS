@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .logo img{
+            vertical-align: top;
+        }
+        .main-header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #6af;
+            position: relative;
+        }
+        
+        .main-nav{
+            display: flex;
+        }
+        .main-nav a{
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        #menu-switch{
+            display: none;
+        }
+        @media screen and (max-width: 767px) {
+            .hb label{
+                width: 40px;
+                height: 40px;
+                background-color: #000;
+                display: block;
+                position: relative;
+            }
+            .main-nav{
+                position: absolute;
+                z-index: 3;
+                width: 80%;
+                height: calc(100vh - 60px);
+                background-color: #fa0;
+                top: 100%;
+                left: 0%;
+                translate: -100% 0%;
+                flex-direction: column;
+                opacity: 0;
+                transition: opacity 1s, translate 0s 1s;
+            }
+            .main-nav a + a{
+                border-top: 1px solid #fff;
+            }
+            #menu-switch:checked + .main-header .main-nav{
+                translate: 0% 0%;
+                opacity: 1;
+                transition: opacity 1s;
+            }
+            .backdrop{
+                position: absolute;
+                right: 0;
+                top: 100%;
+                width: 0%;
+                height: 0;
+                opacity: 0;
+                background-color: #0008;
+                transition: opacity 1s, 
+                            width 0s 1s, 
+                            height 0s 1s;
+            }
+            #menu-switch:checked + .main-header .backdrop{
+                right: 0;
+                top: 100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                opacity: 1;
+                transition: opacity 1s;
+            }
+            /* -------------------------------------- */
+            .hb span{
+                width: 80%;
+                height: 4px;
+                background-color: #f00;
+                position: absolute;
+                inset: 0;
+                margin: auto;
+            }
+            .hb span:nth-child(1){
+                translate: 0px -10px;
+                rotate: 0deg;
+                transition: translate 0.3s 0.3s,
+                            rotate 0.3s 0s;
+            }
+            .hb span:nth-child(2){
+                opacity: 1;
+                transition: opacity 0.3s 0.6s;
+            }
+            .hb span:nth-child(3){
+                translate: 0px 10px;
+                rotate: 0deg;
+                transition: translate 0.3s 0.3s,
+                            rotate 0.3s 0s;
+            }
+            #menu-switch:checked + .main-header .hb span:nth-child(1){
+                translate: 0px 0px;
+                rotate: 45deg;
+                transition: translate 0.3s 0.3s,
+                            rotate 0.3s 0.6s;
+            }
+            #menu-switch:checked + .main-header .hb span:nth-child(2){
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            #menu-switch:checked + .main-header .hb span:nth-child(3){
+                translate: 0px 0px;
+                /*rotate: -45deg;*/
+                rotate: 315deg;
+                transition: translate 0.3s 0.3s,
+                            rotate 0.3s 0.6s;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .hb{
+                display: none;
+            }
+            .main-nav{
+                flex-direction: row;
+            }
+        }
+        @media screen and (min-width: 768px) and (hover:hover) {
+            .main-nav a:hover{
+                color: #f00;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-switch">
+    <header class="main-header">
+        <div class="logo">
+            <a href="#">
+                <img src="https://fakeimg.pl/80x40/200">
+            </a>
+        </div>
+        
+        <div class="hb">
+            <label for="menu-switch">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <nav class="main-nav">
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+        <label for="menu-switch" class="backdrop"></label>
+    </header>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius cum maxime consequuntur, aperiam, <a href="#">excepturi,</a> blanditiis officia iure quod aspernatur debitis ipsa soluta ipsum placeat dicta hic natus accusantium voluptate! Aut.</p>
+    <p>Vero est doloribus facere laborum nostrum doloremque ipsa cum, sit ea, voluptates minima distinctio, dolores eaque blanditiis! Consectetur eligendi, blanditiis eum sequi explicabo recusandae accusantium, iste minima,<a href="#">excepturi,</a> adipisci aliquam eos.</p>
+    <p>Sed veniam, hic, et iure similique officiis totam commodi odio ex sapiente quia distinctio nemo autem consequuntur nesciunt quae repellat, deserunt animi eveniet? Possimus quia vel ab ipsa, dicta nobis.</p>
+    <p>Illum quidem cum porro esse aliquid quis culpa animi magni dolor tempora non voluptatum adipisci soluta dolore rerum sapiente sed amet, debitis nulla, laboriosam id ea. Perspiciatis cum qui veniam?</p>
+    <p>Consequuntur repellendus ad excepturi iste officiis soluta, impedit assumenda, error cumque aspernatur necessitatibus eum laborum? Recusandae enim esse deleniti beatae ratione. A perspiciatis iusto maxime quasi reiciendis impedit laborum doloribus.</p>
+    <p>Rerum repellat sequi dolores, enim sed delectus inventore quam illo placeat amet eaque quasi, asperiores temporibus a suscipit dolor similique atque quibusdam vitae sit quos vel provident animi tempore! Magnam?</p>
+    <p>Distinctio cum nobis officia placeat autem accusantium obcaecati velit nisi vero nostrum. Repellendus illo voluptatum cumque molestias, atque dolore cum! Consectetur nulla libero qui, voluptas veritatis eos? Dolor, blanditiis modi!</p>
+    <p>Fuga, hic facilis eveniet id ea odit dolor exercitationem dolore ut magnam aut totam officia numquam. Voluptatum est sed sit ipsam fugit dignissimos nisi porro, eos aperiam id voluptate consequatur.</p>
+    <p>Corrupti rem ducimus fugit, praesentium blanditiis temporibus corporis itaque vero iste, exercitationem consequatur ipsa dolorum tenetur fugiat qui, enim nisi. Nisi blanditiis, amet tempore vero ex possimus alias quos quam.</p>
+    <p>Cum, quas sapiente. Corrupti non eum harum fugiat neque nesciunt quia. Nam consequuntur sed reprehenderit enim numquam, quis quo rerum vel dignissimos quidem deserunt dolores! Labore voluptatem sed eligendi amet.</p>
+    <p>Error natus voluptates laboriosam, eos asperiores sunt rerum. Veritatis, recusandae vero ad hic assumenda dolorum reiciendis tenetur autem consectetur illo voluptates nemo labore magnam, id sed inventore cupiditate. Provident, excepturi?</p>
+    <p>Asperiores necessitatibus ipsam nam blanditiis repellat aperiam id, deleniti debitis omnis iure quisquam obcaecati repellendus, officia maxime a fugiat aliquid minima voluptate nihil tenetur corporis natus. Sunt repudiandae vel cumque.</p>
+    <p>Nostrum consequuntur quam magnam earum possimus voluptate! Dolores iusto doloribus, quis iure repellendus reprehenderit quaerat illo culpa nemo odio nostrum, pariatur, nihil odit illum consequatur totam tenetur minus voluptatem vel?</p>
+    <p>Itaque ipsa a totam asperiores, repudiandae culpa sint, veniam officiis eveniet maxime, quis velit repellendus maiores laboriosam. Neque voluptatem nemo unde rerum saepe animi qui, est, placeat dignissimos, cum autem.</p>
+    <p>Excepturi recusandae sint labore ipsam esse. Veniam ex sunt, earum minima ad odit dignissimos voluptatibus itaque maiores veritatis atque, mollitia nihil id. Quae hic est non sunt inventore voluptas facilis?</p>
+    <p>Explicabo sunt dolorum nesciunt, perferendis sed facere, deleniti tempore illo consectetur doloribus ratione cumque dolore tenetur eum quia provident aliquid numquam quis! Quis, tenetur. Dolorem exercitationem vitae incidunt illum facilis.</p>
+    <p>Natus et beatae, voluptas amet placeat sequi doloribus possimus aspernatur corporis ullam suscipit veniam? Culpa nisi distinctio sit hic vitae! Modi id ad possimus consequuntur! Veniam itaque consequatur excepturi eos!</p>
+    <p>Veritatis assumenda pariatur nostrum molestiae voluptatum officiis voluptates vitae, doloremque sed consectetur repellat. Eaque quidem dicta perspiciatis quibusdam temporibus velit nobis deserunt maxime optio? Quo voluptatem perferendis dolores repudiandae cupiditate.</p>
+    <p>Dignissimos dicta perferendis ab voluptate obcaecati quisquam alias dolores soluta fugiat, facilis repudiandae. Rerum necessitatibus ut blanditiis ad excepturi, quidem rem animi cum maxime esse explicabo. Numquam soluta commodi perferendis!</p>
+    <p>Architecto similique, quae aperiam vel laboriosam quidem nesciunt iste consequuntur alias officia vero. Corporis, molestiae! Nisi labore asperiores quaerat perspiciatis nobis molestiae quisquam, quidem excepturi eligendi. Accusantium aut delectus laborum?</p>
+
+
+
+</body>
+</html>

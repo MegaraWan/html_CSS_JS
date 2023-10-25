@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+
+</head>
+<body>
+<input type="button" value="一般函式" id="btn1"><br>
+<input type="button" value="箭頭函式" id="btn2"><br>
+
+<script>
+document.getElementById("btn1").onclick = function () {
+    console.log(this); //參考到btn1
+}  
+
+document.getElementById("btn2").onclick =  () => { //箭頭函式應避免用在事件處理器
+    console.log(this); //參考到window
+}    
+</script>
+</body>
+</html>

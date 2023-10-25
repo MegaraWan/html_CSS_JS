@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            color: deeppink;
+        }
+
+        td {
+            width: 80px;
+            color: blue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        作業16：16classmateArray. html (array, 迴圈練習)
+        以陣列存放3位同學的通訊資料, 並印出, 如下表:
+    </h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>學號</th>
+                <th>姓名</th>
+                <th>電話</th>
+                <th>地址</th>
+            </tr>
+        </thead>
+        <tbody id="classmateDetails"></tbody>
+    </table>
+
+    <script>
+        const classmates = [
+            ["94951001", "黃一丁", "0911000333", "中壢市中大路1號"],
+            ["94951002", "劉二毛", "0922999887", "高雄市中山路2號"],
+            ["94951003", "張大化", "0933555779", "台北市師大路3號"]
+        ];
+
+        const tableBody = document.getElementById("classmateDetails");
+
+        for (let i = 0; i < classmates.length; i++) {
+            const row = document.createElement("tr");
+
+            for (let j = 0; j < classmates[i].length; j++) {
+                const cell = document.createElement("td");
+                cell.textContent = classmates[i][j];
+                row.appendChild(cell);
+            }
+
+            tableBody.appendChild(row);
+        }
+    </script>
+
+    <h2>
+        作業17 : 17rand. Html
+        請寫一個rand(min,max)函數,可以傳入min與max的整數,並回傳一個介於min和max間的整數值 (大於等於min,小於等於max)
+        (Math, 函式練習)
+    </h2>
+    <button onclick="displayRandomNumber()">換回傳數字</button>
+    <p>回傳數字: <span id="randomOutput"></span></p>
+    <script>
+        function rand(min, max) {
+            const range = max - min + 1;
+            const num = Math.floor(Math.random() * range) + min;
+            return num;
+        }
+
+        function displayRandomNumber() {
+            const randomNumber = rand(1, 10);
+            document.getElementById("randomOutput").innerText = randomNumber;
+        }
+        displayRandomNumber();
+    </script>
+
+    <h2>作業18 18generateCodes.html
+        請寫一段JavaScript的程式,在網頁上隨機產生4~7個介於0..9之間不同顏色的數字(CSS,Math練習)
+    </h2>
+    <div id="output"></div>
+
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function getRandomColor() {
+            const r = getRandomNumber(0, 255);
+            const g = getRandomNumber(0, 255);
+            const b = getRandomNumber(0, 255);
+            return `rgb(${r},${g},${b})`;
+        }
+
+        const numIterations = getRandomNumber(4, 7);
+        let outputHTML = '';
+
+        for (let i = 0; i < numIterations; i++) {
+            const num = getRandomNumber(0, 9);
+            const color = getRandomColor();
+            outputHTML += `<span style="color:${color}">${num}</span>`;
+        }
+
+        document.getElementById("output").innerHTML = outputHTML;
+    </script>
+</body>

@@ -19,11 +19,11 @@
 //     }
 // }
 
-var emp = new Object();
+var emp = new Object(); //{}
 emp.empno = "7111";
 emp.ename = "Adam";
 emp.apply = function(money){ 
-							document.write(`申請費用${money}元<br>`) ;
+							document.write(`${this.ename}申請費用${money}元<br>`) ;
 						}
 document.write("代號 : " , emp.empno , "<br>");
 document.write("姓名 : " , emp.ename , "<br>");
@@ -32,6 +32,15 @@ emp.apply(6000);
 
 <h2>Object literals</h2>
 <script> 	
+var arr = new Array(11, 22);
+var arr = [11, 22];
+
+var arr = new Array();
+var arr = [];
+
+var obj = new Object();
+var obj = {};
+//-----------有較多屬性(資料)的物件
 var emp = {
 				empno: "7112",
 	      ename: "Ann",
@@ -40,41 +49,49 @@ var emp = {
 				}
 			}
 emp.apply(7000);
+/**/
 </script>
 
 <h2>Object literals------2</h2>
 <script> 
-//ES6提供簡化的字面值撰寫方法(short notation)。	
-let empNo = "7118";
-let ename = "SCOTT";	
-var emp = {empNo, ename,apply(money){ 
+//let empno = document.getElementById("empno").value
+//let ename = document.getElementById("ename").value;
+
+//從前。	
+var empno = "7118"; //假設日後可以前別的地方動態的取得empno的值
+var ename = "Adam";		
+var emp = {
+				empno: empno,
+	      ename: ename,
+				apply: function(money){ 
 					document.write(`申請費用${money}元<br>`) ;
-				}
+				}				
+			}
+emp.apply(6700);
+
+</script>
+
+
+<h2>Object literals------3</h2>
+<script> 
+//ES6提供簡化的字面值撰寫方法(short notation)。	
+
+var empno = "7118";
+var ename = "Adam";		
+var emp = {
+				empno,
+	      ename,
+				apply(money){ 
+					document.write(`申請費用${money}元<br>`) ;
+				}				
 			}
 emp.apply(7700);
+
 </script>
 
 <h2> new 建構函式名稱()</h2>
 <script> 	
-function Employee(empno, ename){
-	this.empno = empno;
-	this.ename = ename;
-	this.apply = function(money){ 
-							    document.write(` ${this.ename}申請費用${money}元<br>`) ;
-							}
-}
-emp = new Employee("7113" , "Alice"); 
-emp.apply(8000);
-//new Object(), Employee.call(emp,"7112" , "Ann")
-// emp2 = new Employee("7113" , "Mary"); //new Object(), Employee.call(emp2, "7112" , "Ann")
-// document.write(emp2, "<br>");
-// emp2.apply(6666);
 
-// Employee("7000","King");
-
-// var obj = new Object();
-// Employee.call(obj,"168168" , "啥啡??");
-// document.write( obj );
 </script>  
 
 

@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>HFS /CHD103_JS/石頭閒語Regular Expression (RegExp) in JavaScript - 樂多日誌_files/</title>
+	<link rel="stylesheet" href="/?mode=section&id=style.css" type="text/css">
+    <script type="text/javascript" src="/?mode=jquery"></script>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<style class='trash-me'>
+	.onlyscript, button[onclick] { display:none; }
+	</style>
+    <script>
+    // this object will store some %symbols% in the javascript space, so that libs can read them
+    HFS = { folder:'/CHD103_JS/石頭閒語Regular Expression (RegExp) in JavaScript - 樂多日誌_files/', number:6, paged:1 }; 
+    </script>
+	<script type="text/javascript" src="/?mode=section&id=lib.js"></script>
+</head>
+<body>
+<!-- -->
+<div id='panel'>
+    	<fieldset id='msgs'>
+		<legend><img src="/~img10"> Messages</legend>
+		<ul style='padding-left:2em'>
+		</ul>
+	</fieldset>
+
+    	<fieldset id='login'>
+		<legend><img src="/~img27"> User</legend>
+		<center>
+		<a href="~login">Login</a>
+		</center>
+	</fieldset>                                       
+
+    	<fieldset id='folder'>
+		<legend><img src="/~img8"> Folder</legend>
+
+       <div style='float:right; position:relative; top:-1em; font-weight:bold;'>
+		<a href=".."><img src="/~img14"> Up</a>
+		</div>
+
+		<div id='breadcrumbs'>
+		
+		<a href="/"  /> <img src="/~img1"> Home</a><a href="/CHD103_JS/" style='padding-left:1.4em;' /> &raquo; CHD103_JS</a><a href="/CHD103_JS/%E7%9F%B3%E9%A0%AD%E9%96%92%E8%AA%9ERegular%20Expression%20(RegExp)%20in%20JavaScript%20-%20%E6%A8%82%E5%A4%9A%E6%97%A5%E8%AA%8C_files/" style='padding-left:2.1em;' /> &raquo; 石頭閒語Regular Expression (RegExp) in JavaScript - 樂多日誌_files</a>
+       </div>
+        
+		<div id='folder-stats'>0 folders, 6 files, 44.1 Kbytes
+		</div>
+		
+		
+	</fieldset>
+
+    	<fieldset id='search'>
+		<legend><img src="/~img3"> Search</legend>
+		<form style='text-align:center'>
+			<input name='search' size='15' value="">
+			<input type='submit' value="go">
+		</form>
+		<div style='margin-top:0.5em;' class='hidden popup'>
+			<fieldset>
+				<legend>Where to search</legend>
+					<input type='radio' name='where' value='fromhere' checked='true' />  this folder and sub-folders
+					<br><input type='radio' name='where' value='here' />  this folder only
+					<br><input type='radio' name='where' value='anywhere' />  entire server
+			</fieldset>
+		</div>
+	</fieldset>
+
+    	<fieldset id='select' class='onlyscript'>
+		<legend><img src="/~img15"> Select</legend>
+		<center>
+    	<button onclick="
+            var x = $('#files .selector');
+            if (x.size() > x.filter(':checked').size())
+                x.attr('checked', true).closest('tr').addClass('selected');
+			else
+                x.attr('checked', false).closest('tr').removeClass('selected');
+			selectedChanged();
+			">All</button>
+    	<button onclick="
+            $('#files .selector').attr('checked', function(i,v){ return !v }).closest('tr').toggleClass('selected');
+			selectedChanged();
+            ">Invert</button>
+    	<button onclick='selectionMask.call(this)'>Mask</button>
+		<p style='display:none; margin-top:1em;'><span id='selected-number'>0</span> items selected</p>
+		</center>
+	</fieldset>
+
+    	
+		<fieldset id='upload'>
+    		<legend><img src="/~img32"> Upload</legend>
+    		<form action="." method='post' enctype="multipart/form-data" style='text-align:right;'>
+    		<input type='file' name='file' multiple style='display:block;' />
+    		<input type='submit' value='Upload' style='margin-top:0.5em;' />
+    		</form>
+		</fieldset>
+	
+
+    	<fieldset id='actions'>
+		<legend><img src="/~img18"> Actions</legend>
+		<center>
+		<button id='newfolderBtn' onclick='ezprompt(this.innerHTML, {type:"text"}, function(s){
+				ajax("mkdir", {name:s});
+		    });'>New folder</button>
+		<button id='commentBtn' onclick='setComment.call(this)'>Comment</button>
+		<button id='deleteBtn' onclick='if (confirm("Are you sure?")) submit({action:"delete"}, "/CHD103_JS/%E7%9F%B3%E9%A0%AD%E9%96%92%E8%AA%9ERegular%20Expression%20(RegExp)%20in%20JavaScript%20-%20%E6%A8%82%E5%A4%9A%E6%97%A5%E8%AA%8C_files/")'>Delete</button>
+
+		<button id='moveBtn' onclick='moveClicked()'>Move</button>
+		<button id='renameBtn' onclick='
+            var a = selectedItems();
+                if (a.size() != 1)
+				return alert("You must select a single item to rename");
+			ezprompt(this.innerHTML, {type:"text"}, function(s){
+				ajax("rename", {from:getItemName(a[0]), to:s});
+		    });'>Rename</button>
+		<button id='archiveBtn' onclick='if (confirm("Are you sure?")) submit({}, "/CHD103_JS/%E7%9F%B3%E9%A0%AD%E9%96%92%E8%AA%9ERegular%20Expression%20(RegExp)%20in%20JavaScript%20-%20%E6%A8%82%E5%A4%9A%E6%97%A5%E8%AA%8C_files/?mode=archive&recursive")'>Archive</button>
+		<a href="/CHD103_JS/%E7%9F%B3%E9%A0%AD%E9%96%92%E8%AA%9ERegular%20Expression%20(RegExp)%20in%20JavaScript%20-%20%E6%A8%82%E5%A4%9A%E6%97%A5%E8%AA%8C_files/?tpl=list&folders-filter=\&recursive">Get list</a>
+		</center>
+	</fieldset>
+
+    	<fieldset id='serverinfo'>
+		<legend><img src="/~img0"> Server information</legend>
+		<a href="http://www.rejetto.com/hfs/">HttpFileServer 2.3j</a>
+		<br />Server time: 2023/7/31 下午 01:51:26
+		<br />Server uptime: 04:46:07
+	</fieldset>
+
+
+</div>
+
+<div id='files_outer'>
+	<div style='height:1.6em;'></div>  
+	
+        <form method='post'>
+            <table id='files'>
+             
+            <th><a href="/CHD103_JS/%E7%9F%B3%E9%A0%AD%E9%96%92%E8%AA%9ERegular%20Expression%20(RegExp)%20in%20JavaScript%20-%20%E6%A8%82%E5%A4%9A%E6%97%A5%E8%AA%8C_files/?sort=n">Name</a><a href="/CHD103_JS/%E7%9F%B3%E9%A0%AD%E9%96%92%E8%AA%9ERegular%20Expression%20(RegExp)%20in%20JavaScript%20-%20%E6%A8%82%E5%A4%9A%E6%97%A5%E8%AA%8C_files/?sort=e">.extension</a>
+            <th><a href="/CHD103_JS/%E7%9F%B3%E9%A0%AD%E9%96%92%E8%AA%9ERegular%20Expression%20(RegExp)%20in%20JavaScript%20-%20%E6%A8%82%E5%A4%9A%E6%97%A5%E8%AA%8C_files/?sort=s">Size</a>
+            <th><a href="/CHD103_JS/%E7%9F%B3%E9%A0%AD%E9%96%92%E8%AA%9ERegular%20Expression%20(RegExp)%20in%20JavaScript%20-%20%E6%A8%82%E5%A4%9A%E6%97%A5%E8%AA%8C_files/?sort=t">Timestamp</a>
+            <th><a href="/CHD103_JS/%E7%9F%B3%E9%A0%AD%E9%96%92%E8%AA%9ERegular%20Expression%20(RegExp)%20in%20JavaScript%20-%20%E6%A8%82%E5%A4%9A%E6%97%A5%E8%AA%8C_files/?sort=d">Hits</a>
+            	<tr class=''><td>
+        <input type='checkbox' class='selector' name='selection' value="avw.gif"  />
+		
+		
+		<a href="avw.gif"><img src="/~img47"> avw.gif</a>
+		
+		
+<td>43B<td>2008/4/30 上午 08:36:52<td>0
+	<tr class='even'><td>
+        <input type='checkbox' class='selector' name='selection' value="ccode.png"  />
+		
+		
+		<a href="ccode.png"><img src="/~img47"> ccode.png</a>
+		
+		
+<td>17.9 KB<td>2008/4/30 上午 08:36:16<td>2
+	<tr class=''><td>
+        <input type='checkbox' class='selector' name='selection' value="copy_trackbck.gif"  />
+		
+		
+		<a href="copy_trackbck.gif"><img src="/~img47"> copy_trackbck.gif</a>
+		
+		
+<td>786B<td>2008/4/30 上午 08:36:16<td>2
+	<tr class='even'><td>
+        <input type='checkbox' class='selector' name='selection' value="me.gif"  />
+		
+		
+		<a href="me.gif"><img src="/~img47"> me.gif</a>
+		
+		
+<td>694B<td>2008/4/30 上午 08:36:16<td>2
+	<tr class=''><td>
+        <input type='checkbox' class='selector' name='selection' value="output.css"  />
+		
+		
+		<a href="output.css"><img src="/~img49"> output.css</a>
+		
+		
+<td>2.1 KB<td>2008/4/30 上午 08:36:52<td>2
+	<tr class='even'><td>
+        <input type='checkbox' class='selector' name='selection' value="site.css"  />
+		
+		
+		<a href="site.css"><img src="/~img49"> site.css</a>
+		
+		
+<td>22.6 KB<td>2008/4/30 上午 08:36:52<td>2
+
+            </table>
+        </form>
+	
+</div>
+
+</body>
+</html>
+<!-- Build-time: 0.021 -->

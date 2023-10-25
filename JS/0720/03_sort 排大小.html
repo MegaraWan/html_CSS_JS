@@ -10,8 +10,9 @@
 <body>
 <h2>使用sort()</h2>
 <script>
-var arr = [ 40, 20, 50, 70, 30, 80, 7]; //[ "40", "20", "50", "70", "30", "80", "7"]
-arr.sort();
+var arr = [ 40, 20, 50, 70, 30, 80, 7]; 
+//會用內碼的資料去排 所以7排在70前面
+arr.sort();//[ "20", "30", "40", "7", "70", "50", "80"]
 document.write( arr, "<br>");	
 </script>     
 
@@ -32,34 +33,24 @@ document.write( arr, "<br>");
 </script>
 
 
-<h2>使用sort() 搭配compare function 使用匿名函式</h2>
-<script>
-
-var arr = [ 40, 20, 50, 70, 30, 80, 7]; //[20, 40, 50, 70, 30, 80, 7]
-arr.sort(function(a,b){
-	return a-b;
-}); //40, 20
-document.write( arr, "<br>");	
-</script>  
-
 <h2>使用sort() 搭配compare function</h2>
 <script>
 function compareAsc(a, b){ //從小排到大
 	return a-b; 
-	//40, 20; 40-20=>20 ; 20, 40
+	//40(第一個), 20(第二個); 40-20=>20 ;20>0所以第二個擺前面 20, 40
 	//20, 50; 20-50=>-30; 20, 50
 }
-var arr = [ 40, 20, 50, 70, 30, 80, 7]; //[20, 40, 50, 70, 30, 80, 7]
+var arr = [ 40, 20, 50, 70, 30, 80, 7];
 arr.sort(compareAsc); //40, 20
 document.write( arr, "<br>");	
 </script>  
 
 <h2>使用sort() 搭配compare function</h2>
 <script>
-function compareDesc(a, b){ //從大排到小, a:40, b:20
+function compareDesc(a, b){ //從大排到小
 	return b-a; 
-	//40, 20; 20-40=>-20 ;  40, 20
-	//20, 50; 50-20=>30;  50, 20
+	//40(第一個), 20(第二個); 20-40=>-20 ;-20<0所以(第一個)擺前面  40, 20
+	//20, 50; 50-20=>30;30>0所以(第二個)擺前面  50, 20
 }
 var arr = [ 40, 20, 50, 70, 30, 80, 7];
 arr.sort(compareDesc); //40, 20
@@ -86,9 +77,9 @@ function compareLength(a, b){
 
 arr.sort(compareLength); //"Sometime ever, sometime never", "No cross, no crown"
 
-for(let data of arr){
-	document.write( data, "<br>");
-}
+document.write( arr, "<br>");
+	
+</script>
 </script>
 
 
@@ -100,14 +91,14 @@ function showDouble(data){
 
 var arr = [11, 22, 33];
 
-arr.forEach(showDouble);
+arr.forEach(showDouble);//22 44 66
 </script>
 
 <h2>簡化判斷-------------1</h2>
 <script>
 var found = false;
-//--------假設這裡有一段程式在找資料, 如果找到我們就將狀態記錄成found = true
-found = true; //如果找到
+//--------假設這裡有一段for迴圈程式在找資料, 如果找到我們就將狀態記錄成found = true
+found = true; //for迴圈回傳如果找到
 //--------
 
 if(found === true){ 

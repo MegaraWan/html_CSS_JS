@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+
+</head>
+<body>
+
+<h2>break, 請問1+2+3+...加到哪一個數會大於1000</h2>
+<script>
+var total = 0;
+for(var i=1; i<=1000; i++){
+    total += i;
+    if(total>=1000){
+        document.write( `1+2+...+${i} = ${total}, 已大於1000` ,"<br>");
+        break;
+    }
+}    
+</script>
+
+
+<h2>continue</h2>
+<script>
+var total = 0;
+
+for(var i=1; i<=50; i++){ //i:2
+    if(i % 3 !== 0 ){
+        continue;
+    }
+    document.write(i, " ");
+    total += i;
+}    
+document.write( "<br>");
+document.write( "總和 : ", total, "<br>");
+</script>
+</body>
+</html>

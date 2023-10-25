@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+
+</head>
+
+<body>
+<input type="button" id="btn" value="test">
+
+<table align="center" cellspacing="0" border="1">
+    <tr><td>11111111</td><td>aaaaaaaaaa</td></tr>
+    <tr><td>11111111</td><td>aaaaaaaaaa</td></tr>
+    <tr><td>11111111</td><td>aaaaaaaaaa</td></tr>
+    <tr><td>11111111</td><td>aaaaaaaaaa</td></tr>
+    <tr><td id="td51">11111111</td><td id="td52">aaaaaaaaaa</td></tr>
+</table> 
+
+<script>
+//用下面這個方式要寫好幾次很麻煩
+// function highlight(){
+//     let obj = document.getElementById("td51")
+//     obj.style.backgroundColor = "pink";
+// }   
+
+// function normal(){
+//     let obj = document.getElementById("td51")
+//     obj.style.backgroundColor = "white";
+// }   
+// function highlight(){
+//     let obj = document.getElementById("td52")
+//     obj.style.backgroundColor = "pink";
+// }   
+
+// function normal(){
+//     let obj = document.getElementById("td52")
+//     obj.style.backgroundColor = "white";
+// }   
+// document.getElementById("td51").onmouseover = highlight;
+// document.getElementById("td51").onmouseout = normal;
+// document.getElementById("td52").onmouseover = highlight2;
+// document.getElementById("td52").onmouseout = normal2;
+
+//註冊事件處理器
+function highlight(dog){ //dog會接收到瀏覽器送來的事件物件
+    let obj = dog.target; //e.target指事件發生在哪一個元素
+    obj.style.backgroundColor = "pink";
+}   
+
+function normal(){ //也可以用arguments的寫法
+    let obj = arguments[0].target;
+    obj.style.backgroundColor = "white";
+}   
+
+let tds = document.getElementsByTagName("td"); 
+//tds是一個類陣列的物件, 會有tds.length記錄其內元素的個數
+
+for(let i=0; i<tds.length; i++){
+    tds[i].onmouseover = highlight; 
+    tds[i].onmouseout = normal;     
+}
+// tds[0].onmouseover = highlight;
+// tds[0].onmouseout = normal;
+
+// tds[1].onmouseover = highlight;
+// tds[1].onmouseout = normal; 
+
+// tds[2].onmouseover = highlight;
+// tds[2].onmouseout = normal;
+
+// tds[3].onmouseover = highlight;
+// tds[3].onmouseout = normal;
+
+</script>  
+</body>
+</html>

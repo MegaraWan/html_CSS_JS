@@ -12,16 +12,55 @@
 </head>
 
 <body>
-<!-- <div>現在時刻 : <span id="timePanel"></span></div>	 -->
+<div>現在時刻 : <span id="timePanel"></span></div> <!-- 09:40:38 -->
 
 <script>
-//----------------ex1 ,	早安~<br> 午安~<br> 晚安~<br>
+//--------------------------------ex1 ,	早安~<br> 午安~<br> 晚安~<br>
+var today = new Date();
+if (today.getHours()<12) {
+	document.write(  "早安~<br>");
+} else if (today.getHours()<18) {
+	document.write(  "午安~<br>");
+} else {
+	document.write(  "晚安~<br>");
+}
+document.write( today.toDateString(), "<br>");
+document.write( today.toString(), "<br>");
 
+//---------------------------------ex2, 追追追
+var birthday = new Date(2000, 0, 30); //1月30日
+var weekday = "日一二三四五六";
+document.write(`出生那天是星期${weekday.charAt(birthday.getDay())}<br>` );
 
-//-----------------ex2, 追追追
+var weekdayArr = ["日","一","二","三","四","五","六"]; //weekdayArr[birthday.getDay()]
+document.write(`出生那天是星期${weekdayArr[birthday.getDay()]}<br>`);
 
-//-----------------ex3, 電子時鐘
+//---------------------------------ex3, 電子時鐘
+function showTime(){
+	let now = new Date();
+	/*
+	let hh = (now.getHours()<10? "0" : "") +  now.getHours();
+	let mm = (now.getMinutes()<10? "0" : "") +  now.getMinutes();
+	let ss = (now.getSeconds()<10? "0" : "") +  now.getSeconds();
+	document.getElementById("timePanel").innerText = `${hh} : ${mm} : ${ss}`;	
+	*/
+	//-------------------------------------------
+	let hh2 = now.getHours();
+	hh2 = (hh2<10? "0" : "") + hh2 ;
 
+	let mm2 = now.getMinutes();
+	mm2 = (mm2<10? "0" : "") + mm2 ;
+
+	let ss2 = now.getSeconds();
+	ss2 = (ss2<10? "0" : "") + ss2 ;
+	document.getElementById("timePanel").innerText = `${hh2} : ${mm2} : ${ss2}`;	
+}
+
+window.addEventListener("load", function(){
+	//----------------
+	showTime();
+	setInterval( showTime, 1000);
+})
 </script>    
 </body>
 </html>

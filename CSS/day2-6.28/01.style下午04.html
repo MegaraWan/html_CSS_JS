@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color:orange;
+            font: size 22px;
+        }
+
+        .info{
+            color:blue;
+        }
+    
+        #box{
+            color: brown;
+        }/* ID為box */
+
+        div p {
+            color: blueviolet;
+        }/* div裡面的P標籤 */
+
+        .info p{
+            color: cadetblue;
+        }/* div名為info裡面的P標籤 */
+
+    </style>
+    <!-- 
+    style標籤
+    要選取的元素 {
+        要設定的屬性: 值;
+        要設定的屬性: 值;
+        要設定的屬性: 值;
+        要設定的屬性: 值;
+    } 
+   
+    .class名稱 可以多個重複class  
+    #id名稱  只能一個 獨一無二   
+    優先權 有衝突才會發生 !important>inline-style(放在標籤內的style屬性)>ID>class>標籤 
+    兩個都一樣後面蓋掉前面的 
+    
+    選到同一個對象算分數
+    
+    用分數去算* (所有標籤) 不算分
+    設定*又設定 標籤
+    標籤內的顏色會以標籤為主
+
+    分數一樣後面蓋掉前面
+
+    !improtant不要用因為維護很困難
+   p{
+        color:red !important;
+        font: size 22px;
+    }
+   
+    -->
+</head>
+<body>
+    
+    <p style="color:aquamarine">Consequuntur commodi voluptates, praesentium, consectetur sequi dolores dolorum, officia tempora omnis debitis ex saepe! Esse eius odio at dignissimos qui fugiat expedita error tempora distinctio adipisci omnis quo, deleniti possimus?</p>
+    <!--style屬性 -->
+    <!-- 
+    <標籤></結束標籤>
+    <標籤 屬性=值 屬性=值 屬性=值></結束標籤> -->
+
+    <p class="info" id="box">
+        ID=box
+    </p>
+    
+    <p class="info">
+        class=info
+    </p>
+    
+    <p>
+        一般的P標籤
+    </p>
+
+    <div>
+        <p>
+            div裡面的P標籤
+        </p>
+    </div>
+
+    <div class="info">
+        <p>
+            有命名class的div裡面的P標籤
+        </p>
+    </div>
+</body>
+</html>

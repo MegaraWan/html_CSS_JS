@@ -11,33 +11,66 @@ var str="abcdeabcde";
 
 var obj = new String("abcde");
 
+document.write("typeof str : ", typeof str, "<br>"); //string
+document.write("typeof obj : ", typeof obj, "<br>"); //object
+
 document.write("length : " , str.length, "<br>"); 
-document.write("toUpperCase() : " , str.toUpperCase(), "<br>"); 
+document.write("str.toUpperCase() : " , str.toUpperCase(), "<br>"); //ABCDEABCDE
+document.write("str : " , str, "<br>"); //abcdeabcde
 
-document.write("indexOf('cd') : " , str.indexOf("cd"), "<br>"); 
-document.write("indexOf('cdd') : " , str.indexOf("cdd"), "<br>"); 
+document.write("indexOf('cd') : " , str.indexOf("cd"), "<br>"); //2
+document.write("indexOf('cdd') : " , str.indexOf("cdd"), "<br>"); //-1
 
-document.write("lastIndexOf('cd') : " , str.lastIndexOf('cd'), "<br>"); 
-document.write("lastIndexOf('cdd') : " , str.lastIndexOf('cdd'), "<br>"); 
+document.write("lastIndexOf('cd') : " , str.lastIndexOf('cd'), "<br>"); //7
+document.write("lastIndexOf('cdd') : " , str.lastIndexOf('cdd'), "<br>"); //-1
 
-document.write("match('cd') : " , str.match('cd'), "<br>"); 
-document.write("match('cdd') : " , str.match('cdd'), "<br>"); 
+document.write("match('cd') : " , str.match('cd'), "<br>"); //cd
+document.write("match('cdd') : " , str.match('cdd'), "<br>"); //null
 
-document.write("charAt(3) : " , str.charAt(3), "<br>");  
-document.write("charCodeAt(3) : " , str.charCodeAt(3), "<br>"); 
+document.write("charAt(3) : " , str.charAt(3), "<br>"); //d 
+document.write("charCodeAt(3) : " , str.charCodeAt(3), "<br>"); //100 
 
 //abcdeabcde
-document.write("substr(2,5) : " , str.substr(2,5), "<br>"); 
-document.write("substring(2,5) : " , str.substring(2,5), "<br>");
+document.write("substr(2,5) : " , str.substr(2,5), "<br>"); //cdeab
+document.write("substring(2,5) : " , str.substring(2,5), "<br>"); //cde
 
-document.write("substr(2,50) : " , str.substr(2,50), "<br>"); 
-document.write("substr(2) : " , str.substr(2), "<br>"); 
-
-document.write("replace('de','QQQ') : " , str.replace('de','QQQ'), "<br>"); 
+document.write("substr(2,50) : " , str.substr(2,50), "<br>"); //cdeabcde
+document.write("substr(2) : " , str.substr(2), "<br>"); //cdeabcde
+//abcdeabcde
+document.write("replace('de','QQQ') : " , str.replace('de','QQQ'), "<br>"); //abcQQQabcde
+document.write("replace(/de/g,'QQQ') : " , str.replace(/de/g,'QQQ'), "<br>");
 
 str = "aa,bb,cc:dd,ee,ff";
 var arr = str.split(",");
+for(let i in arr){
+    document.write( `${i} : ${arr[i]} <br>` );
+}
 
 </script>    
+
+<h2>找出主檔名, 副檔名, 並顯示是否為合法的副檔名</h2>
+<script>
+//var fileStr = "sara.gif";
+var fileStr = "sara.smile.docx";  
+var fileName, fileExt;
+//副檔名必須是 bmp, png, gif, ico
+var allowed = ["bmp", "png", "gif", "ico"];
+
+var dotPos = fileStr.lastIndexOf(".");
+fileName = fileStr.substring(0, dotPos);
+fileExt = fileStr.substr(dotPos + 1);
+document.write("fileName : ", fileName, "<br>");
+document.write("fileExt : ", fileExt, "<br>");
+
+if (allowed.indexOf(fileExt) === -1) {
+    document.write( "副檔名: ", fileExt, "是不合法的副檔名<br>"); 
+} else {
+    document.write( "副檔名: ", fileExt, "是合法的副檔名<br>"); 
+}
+
+
+document.write( "副檔名: ", fileExt, (allowed.indexOf(fileExt) === -1) ? "是不合法的副檔名<br>":"是合法的副檔名<br>");
+/**/
+</script>
 </body>
 </html>

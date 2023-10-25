@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: #f00;
+        }
+        /* @media 裝置類型 and (條件1) and (條件2) {
+            符合條件時會執行的CSS
+        } 
+        and前後要加空白 */
+        @media screen and (min-width:768px){
+            .box{
+                background-color: #00f;
+            }
+        }
+        /* 768 平版直的 */
+
+        @media screen and (min-width:1024px){
+            .box{
+                background-color: #fa0;
+            }
+        }
+        /* 平板橫的 */
+
+        @media screen and (min-width:1200px){
+            .box{
+                background-color: #0f0;
+            }
+        }
+        /* 桌機or ipad pro橫的 */
+
+        /* 尺寸設定要照順序寫，
+        不然會有優先權的問題 
+        後面會取代前面*/
+
+        /* 適應不同尺寸
+        ipad min 768*1024
+        air 820*1180
+        pro 1024*1366 */
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+
+
+
+    
+</body>
+</html>

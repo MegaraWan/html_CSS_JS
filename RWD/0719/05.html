@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box:has(span) {
+            background-color: #d00;
+        }
+        .wrap{
+            height: 100px;
+            font-size: 30px;
+            background-color: #ccc;
+            margin-top: 20px;
+        }
+        .wrap:has(:checked){
+            background-color: #fa0;
+        }
+        .wrap:has(:checked) span{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="box">
+        <span>span</span>
+    </div>
+    
+    <div class="box">
+        <div>div</div>
+    </div>
+
+    <div class="box">
+        <span>span</span>
+    </div>
+
+
+    <div class="wrap">
+        <span>wrap</span>
+        <input type="checkbox" name="" id="">
+    </div>
+
+
+</body>
+</html>

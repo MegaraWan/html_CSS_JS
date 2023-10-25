@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .hb{
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <style>
+        .hb1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .hb1 span{
+            width: 80%;
+            height: 4px;
+            background-color: #f00;
+        }
+    </style>
+    
+    <div class="hb hb1">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+<!-- ------------------------------------------- -->
+    <style>
+        .hb2{
+            position: relative;
+        }
+        .hb2 span{
+            width: 80%;
+            height: 4px;
+            background-color: #f00;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            box-shadow: 0px -10px 0px #00f, 0px 10px 0px #000;
+        }
+    </style>
+
+    <div class="hb hb2">
+        <span></span>
+    </div>
+
+<!-- ------------------------------------------- -->
+    <style>
+        .hb3{
+            position: relative;
+        }
+        .hb3::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 80%;
+            height: 4px;
+            background-color: #f00;
+            box-shadow: 0px -10px 0px #00f, 0px 10px 0px #000;
+        }
+    </style>
+    
+    
+    <div class="hb hb3"></div>
+
+
+
+</body>
+</html>
